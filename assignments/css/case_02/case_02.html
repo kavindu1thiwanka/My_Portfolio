@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <style>
+
+        ::-webkit-scrollbar{
+            width: 0px;
+        }
+
+        main {
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+
+        header{
+            background: white;
+            box-shadow: 0px -1px 8px 2px #1c1717e8;
+            position: relative;
+            height: 73px;
+        }
+        header>img{
+            width: 190px;
+            position: relative;
+            top: 20px;
+            left: 10px;
+        }
+        header>nav{
+            position: absolute;
+            right: 40px;
+            top: 0;
+        }
+
+        header>nav>ul>li{
+            display: inline-block;
+            padding: 10px;
+            color: rgba(46, 41, 41, 0.96);
+        }
+
+        body>main>aside:nth-child(1)>div{
+            background: rebeccapurple;
+            height: 100vh;
+            width: 30vw;
+            position: absolute;
+        }
+
+        body>main>aside:nth-child(2)>div{
+            right: 0;
+            background: white;
+            height: 100vh;
+            width: 70vw;
+            position: absolute;
+        }
+
+        footer>div{
+            background: gray;
+            width: 100vw;
+            position: absolute;
+        }
+
+        body>main>aside:nth-child(1)>div>nav>ul>li{
+            display: block;
+            padding: 10px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <img src="assets/img/favicon.png" alt="Logo">
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contact</li>
+            <li>About Us</li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <aside>
+        <div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                    <li>About Us</li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <aside>
+        <div></div>
+    </aside>
+</main>
+<footer>
+    <div>
+        <h1 align="center">Download</h1>
+    </div>
+</footer>
+</body>
+</html>
