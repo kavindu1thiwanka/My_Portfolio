@@ -3,45 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <title>Kavindu Thiwanka</title>
-    <link rel="stylesheet" href="assets/css/normalize.css">
+
     <base href="localhost">
     <meta name="description" content="This is my Portfolio">
     <meta name="author" content="Kavindu Thiwanka">
     <meta name="owner" content="Kavindu Thiwanka">
     <meta name="theme-color" content="black">
+
+    <link rel="stylesheet" href="assets/css/fonts/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Artifika&display=swap" rel="stylesheet">
+    <style>
+
+        ::-webkit-scrollbar{
+            width: 0px;
+        }
+
+        body{
+            margin: 0;
+        }
+
+        header{
+            background: black;
+            box-shadow: 0px -1px 4px 1px #1c1717e8;
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            z-index: 2;
+            top: 0;
+            border-bottom:1px solid white;
+        }
+        header>nav:nth-child(2){
+            position: absolute;
+            right: 20px;
+        }
+        header>nav:nth-child(1){
+            position: absolute;
+            left: 10px;
+        }
+        header>:nth-child(1)>h3{
+            position: relative;
+            left: 10px;
+            color: white;
+            font-size: 20px;
+        }
+        header>nav:nth-child(2)>ul>li{
+            display: inline-block;
+            padding: 10px;
+            color: white;
+            font-family: Lato;
+            font-size: 18px;
+        }
+
+        /*Main*/
+        main {
+            position: relative;
+            margin-top: 60px;
+            background: #030320;
+        }
+        main>section:nth-child(1){
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+        }
+        main>section:nth-child(1)>img{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+        main>section:nth-child(1)>section:nth-child(3){
+            position: absolute;
+            top: 60px;
+            left: 70px;
+        }
+        main>section:nth-child(1)>section:nth-child(3)>h1{
+             position: relative;
+             color: white;
+            font-size: 60px;
+            margin-top: 0px;
+            margin-bottom: 15px;
+            font-family: 'Chakra Petch', sans-serif;
+         }
+        main>section:nth-child(1)>section:nth-child(4){
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            position: absolute;
+            bottom: 430px;
+            left: 350px;
+        }
+        main>section:nth-child(1)>section:nth-child(4)>aside:nth-child(1){
+            position: absolute;
+            right: 0;
+            width: 300px;
+
+        }
+        main>section:nth-child(1)>section:nth-child(4)>aside:nth-child(2){
+            position: absolute;
+            left: 0;
+            width: 500px;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+        main>section:nth-child(1)>section:nth-child(4)>aside>h1{
+            position: relative;
+            color: white;
+            font-size: 30px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        main>section:nth-child(1)>section:nth-child(4)>aside>nav>h1{
+            position: relative;
+            color: white;
+            font-size: 30px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        main>section:nth-child(1)>section:nth-child(4)>aside>nav>h1>i{
+            color: #1BF458;
+            padding-left: 5px;
+        }
+        main>section:nth-child(1)>section:nth-child(4)>aside>h5{
+            position: relative;
+            color: white;
+            font-size: 15px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        main>section:nth-child(1)>section:nth-child(4)>aside>img{
+            height: 210px;
+            width: 300px;
+            border-radius: 20px;
+        }
+
+        /*PROFILE*/
+        main>section:nth-child(2){
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+        }
+        main>section:nth-child(2)>h1{
+            position: relative;
+            font-size: 50px;
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        main>section:nth-child(2)>section>h1{
+            position: relative;
+            font-size: 27px;
+            font-family: 'Artifika', serif;
+            color: white;
+            margin-top: 45px;
+            margin-left: 25px;
+        }
+        main>section:nth-child(2)>section>p{
+            position: relative;
+            font-size: 15px;
+            font-family: 'Arimo', sans-serif;
+            color: white;
+            margin-left: 25px;
+        }
+        main>section:nth-child(2)>nav{
+            position: absolute;
+            bottom: 60px;
+            right: 30px;
+        }
+        main>section:nth-child(2)>nav>h1{
+            position: relative;
+            color: white;
+            font-family: 'Oswald', sans-serif;
+        }
+        main>section:nth-child(2)>nav>h1>i{
+            color: #1BF458;
+            padding-left: 5px;
+        }
+
+
+        /*SERVICE*/
+        main>section:nth-child(3){
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+        }
+        main>section:nth-child(3)>h1{
+            position: relative;
+            font-size: 50px;
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        main>section:nth-child(3)>dl>dt{
+            position: relative;
+            font-size: 30px;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 15px;
+            margin-left: 25px;
+            margin-top: 40px;
+        }
+        main>section:nth-child(3)>dl>dd{
+            position: relative;
+            font-size: 20px;
+            font-family: 'Arimo', sans-serif;
+            color: white;
+            margin-left: 25px;
+            margin-bottom: 90px;
+        }
+        main>section:nth-child(3)>nav{
+            position: absolute;
+            bottom: 60px;
+            right: 30px;
+        }
+        main>section:nth-child(3)>nav>h1{
+             position: relative;
+             color: white;
+             font-family: 'Oswald', sans-serif;
+         }
+        main>section:nth-child(3)>nav>h1>i{
+            color: #1BF458;
+            padding-left: 5px;
+        }
+
+    </style>
 </head>
 <header>
-    <aside>
-        <!--logo-->
-    </aside>
     <nav>
-        <a href="#profile-section">PROFILE</a>
-        <a href="#services-section">SERVICE</a>
-        <a href="#projects-section">PROJECTS</a>
-        <a href="#contact-section">CONTACT</a>
+        <h3 style="font-family: 'Chakra Petch', sans-serif">K.T</h3>
+    </nav>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contact</li>
+            <li>About Us</li>
+        </ul>
     </nav>
 </header>
 
 <main>
     <section>
         <dfn id="home-section"></dfn>
-        <!-- img -->
+        <img src="assets/portfolio/programmer-scanning-screen-his-smartwatch-with-smartphone-camera.jpg" alt="Logo">
         <section>
             <h1>Hi,</h1>
             <h1>I'm Kavindu Thiwanka,</h1>
             <h1>Full Stack Developer.</h1>
         </section>
-
         <section>
             <aside>
-                <!-- img -->
+                <img src="assets/portfolio/1.gif" alt="Logo">
             </aside>
             <aside>
                 <h1>My Latest Work</h1>
                 <h5>Details about Project</h5>
                 <br>
                 <br>
-
+                <nav>
+                <h1>View Project <i class="fa-solid fa-arrow-right-long"></i></h1>
+                </nav>
             </aside>
         </section>
     </section>
@@ -61,11 +288,9 @@
             <!-- Image & text -->
 
         </section>
-        <aside>
-            <nav>
-
-            </nav>
-        </aside>
+        <nav>
+            <h1>CONTACT DETAILS <i class="fa-solid fa-arrow-right-long"></i></h1>
+        </nav>
     </section>
 
     <!-- Services Section -->
@@ -84,11 +309,9 @@
             <dt>UI / UX Designing</dt>
             <dd>I do design ui/ux for desktop applications, mobile applications,web applications.</dd>
         </dl>
-        <aside>
-            <nav>
-
-            </nav>
-        </aside>
+        <nav>
+            <h1>CONTACT DETAILS <i class="fa-solid fa-arrow-right-long"></i></h1>
+        </nav>
     </section>
 
     <!-- Projects Section -->
@@ -119,9 +342,7 @@
 </main>
 
 <footer>
-    <aside>
-        <p>©2022 BY KAVINDU THIWANKA </p>
-    </aside>
+    <h5>©2022 BY KAVINDU THIWANKA </h5>
 </footer>
 
 </body>

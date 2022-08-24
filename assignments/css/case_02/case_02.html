@@ -68,11 +68,33 @@
             position: relative;
         }
 
-        main>section>section>img{
+        main>section>section>div>img{
+            height: 255px;
+            position: relative;
+        }
+
+        main>section>section{
             height: 250px;
             position: relative;
         }
 
+        main>section>section>div{
+            height: 100%;
+            width: calc(100%/3);
+            position: absolute;
+        }
+
+        main>section>section>div:nth-child(1){
+            left: 0;
+        }
+        main>section>section>div:nth-child(2){
+            left: calc(100%/3);
+            right: 0;
+
+        }
+        main>section>section>div:nth-child(3){
+            right: 0;
+        }
 
         footer{
             background: gray;
@@ -135,9 +157,9 @@
     </nav>
     <section>
         <section>
-            <img src="assets/img/ComplexPresentAustraliankelpie-size_restricted.gif" alt="Logo">
-            <img src="assets/img/ComplexPresentAustraliankelpie-size_restricted.gif" alt="Logo">
-            <img src="assets/img/ComplexPresentAustraliankelpie-size_restricted.gif" alt="Logo">
+            <div><img src="assets/img/ComplexPresentAustraliankelpie-size_restricted.gif" alt="Logo"></div>
+            <div><img src="assets/img/ComplexPresentAustraliankelpie-size_restricted.gif" alt="Logo"></div>
+            <div><img src="assets/img/ComplexPresentAustraliankelpie-size_restricted.gif" alt="Logo"></div>
         </section>
         <article>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto at dolores hic labore nihil, perspiciatis veniam. Ab consequatur deleniti error excepturi illum, incidunt optio quia quis saepe sit vel!</p>
