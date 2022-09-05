@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation Case 03 Slider</title>
+    <style>
+        main {
+            position: absolute;
+            height: 400px;
+            width: 700px;
+            box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.68);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            animation-name: my-animation;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+        }
+
+        main>section{
+            height: 100%;
+            width: calc(100%*5);
+            border: 2px solid red;
+        }
+
+        @keyframes my-animation {
+            0% {
+                background: url("img/Dragon-Ball.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+            25%{
+                background: url("img/naruto g.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+            50% {
+                background: url("img/naruto 1.png");
+                background-size: cover;
+                background-position: center;
+            }
+            100% {
+                background: url("img/one piece g.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
+</body>
+</html>
