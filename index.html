@@ -19,6 +19,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Artifika&display=swap" rel="stylesheet">
     <style>
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         button {
             background-color: #FF0000;
             border-radius: 20px;
@@ -36,6 +40,8 @@
 
         body {
             margin: 0;
+            width: 100vw;
+            position: relative;
         }
 
         header {
@@ -46,7 +52,7 @@
             height: 60px;
             z-index: 2;
             top: 0;
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid #444444;
         }
 
         header > nav:nth-child(2) {
@@ -59,19 +65,25 @@
             left: 10px;
         }
 
-        header > :nth-child(1) > h3 {
+        header > :nth-child(1) > h3 > a {
             position: relative;
             left: 10px;
             color: white;
             font-size: 20px;
+            text-decoration: none;
+        }
+        header > nav:nth-child(2) > ul > li {
+            display: inline-block;
+
         }
 
-        header > nav:nth-child(2) > ul > li {
+        header > nav:nth-child(2) > ul > li > a{
             display: inline-block;
             padding: 10px;
             color: white;
             font-family: Lato;
             font-size: 18px;
+            text-decoration: none;
         }
 
 
@@ -80,27 +92,27 @@
             position: relative;
             margin-top: 60px;
             background: #030320;
+            width: 100%;
         }
 
         main > section:nth-child(1) {
-            position: relative;
-            height: 100vh;
-            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
         }
 
         main > section:nth-child(1) > img {
-            position: absolute;
             height: 100%;
             width: 100%;
         }
 
-        main > section:nth-child(1) > section:nth-child(3) {
+        main > section:nth-child(1) > div:nth-child(2) {
             position: absolute;
             top: 60px;
             left: 70px;
         }
 
-        main > section:nth-child(1) > section:nth-child(3) > h1 {
+        main > section:nth-child(1) > div:nth-child(2) > h1 {
             position: relative;
             color: white;
             font-size: 60px;
@@ -109,28 +121,34 @@
             font-family: 'Chakra Petch', sans-serif;
         }
 
-        main > section:nth-child(1) > section:nth-child(4) {
+        main > section:nth-child(1) > div:nth-child(3) {
             position: absolute;
-            bottom: 430px;
-            left: 350px;
+            top: 400px;
+            left: 70px;
         }
 
-        main > section:nth-child(1) > section:nth-child(4) > aside:nth-child(1) {
-            position: absolute;
-            right: 0;
+        main > section:nth-child(1) > div:nth-child(3) > aside:nth-child(1) {
+            position: relative;
+            left: 0;
+            height: 210px;
             width: 300px;
+            padding-left: 20px;
+            padding-top: 20px;
 
         }
 
-        main > section:nth-child(1) > section:nth-child(4) > aside:nth-child(2) {
+        main > section:nth-child(1) > div:nth-child(3) > aside:nth-child(2) {
             position: absolute;
             left: 0;
+            top: 0;
+            margin-top: 21px;
+            margin-left: 340px;
             width: 500px;
             padding-left: 20px;
             padding-top: 20px;
         }
 
-        main > section:nth-child(1) > section:nth-child(4) > aside > h1 {
+        main > section:nth-child(1) > div:nth-child(3) > aside > h1 {
             position: relative;
             color: white;
             font-size: 30px;
@@ -138,20 +156,21 @@
             margin-bottom: 10px;
         }
 
-        main > section:nth-child(1) > section:nth-child(4) > aside > nav > h1 {
+        main > section:nth-child(1) > div:nth-child(3) > aside > nav > h1 > a{
             position: relative;
             color: white;
             font-size: 30px;
             margin-top: 0px;
             margin-bottom: 10px;
+            text-decoration: none;
         }
 
-        main > section:nth-child(1) > section:nth-child(4) > aside > nav > h1 > i {
+        main > section:nth-child(1) > div:nth-child(3) > aside > nav > h1 > a > i {
             color: #1BF458;
             padding-left: 5px;
         }
 
-        main > section:nth-child(1) > section:nth-child(4) > aside > h5 {
+        main > section:nth-child(1) > div:nth-child(3) > aside > h5 {
             position: relative;
             color: white;
             font-size: 15px;
@@ -159,7 +178,7 @@
             margin-bottom: 10px;
         }
 
-        main > section:nth-child(1) > section:nth-child(4) > aside > img {
+        main > section:nth-child(1) > div:nth-child(3) > aside > img {
             height: 210px;
             width: 300px;
             border-radius: 20px;
@@ -169,8 +188,7 @@
         /*PROFILE*/
         main > section:nth-child(2) {
             position: relative;
-            height: 100vh;
-            width: 100vw;
+            width: 100%;
         }
 
         main > section:nth-child(2) > h1 {
@@ -210,19 +228,45 @@
             line-height: 1.6;
         }
 
-        main > section:nth-child(2) > nav {
+        main > section:nth-child(2) > section > section:nth-child(4) {
+            width: 600px;
+            height: 400px;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            margin-left: 100px;
+            margin-top: 40px;
+        }
+
+        main > section:nth-child(2) > section > section:nth-child(4) > div{
+            color: white;
+            font-family: Arimo;
+            text-align: justify;
+        }
+
+        main > section:nth-child(2) > section > section:nth-child(4) > div > img{
+            width: 50px;
+            height: 50px;
+            margin-right: 30px;
+        }
+
+        main > section:nth-child(2) > div:nth-child(4){
+            position: relative;
+            margin-bottom: 100px;
+        }
+
+        main > section:nth-child(2) > div:nth-child(4) > nav {
             position: absolute;
-            bottom: 60px;
             right: 30px;
         }
 
-        main > section:nth-child(2) > nav > h1 {
+        main > section:nth-child(2) > div:nth-child(4) > nav > h1 {
             position: relative;
             color: white;
             font-family: 'Oswald', sans-serif;
         }
 
-        main > section:nth-child(2) > nav > h1 > i {
+        main > section:nth-child(2) > div:nth-child(4) > nav > h1 > i {
             color: #1BF458;
             padding-left: 5px;
         }
@@ -231,8 +275,7 @@
         /*SERVICE*/
         main > section:nth-child(3) {
             position: relative;
-            height: 100vh;
-            width: 100vw;
+            width: 100%;
         }
 
         main > section:nth-child(3) > h1 {
@@ -268,19 +311,23 @@
             margin-bottom: 90px;
         }
 
-        main > section:nth-child(3) > nav {
+        main > section:nth-child(3) > div:nth-child(4){
+            position: relative;
+            margin-bottom: 190px;
+        }
+
+        main > section:nth-child(3) > div:nth-child(4) > nav {
             position: absolute;
-            bottom: 60px;
             right: 30px;
         }
 
-        main > section:nth-child(3) > nav > h1 {
+        main > section:nth-child(3) > div:nth-child(4) > nav > h1 {
             position: relative;
             color: white;
             font-family: 'Oswald', sans-serif;
         }
 
-        main > section:nth-child(3) > nav > h1 > i {
+        main > section:nth-child(3) > div:nth-child(4) > nav > h1 > i {
             color: #1BF458;
             padding-left: 5px;
         }
@@ -289,7 +336,7 @@
         /*PROJECT*/
         main > section:nth-child(4) {
             position: relative;
-            width: 100vw;
+            width: 100%;
         }
 
         main > section:nth-child(4) > h1 {
@@ -302,12 +349,12 @@
             margin-top: 20px;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) {
+        main > section:nth-child(4) > section:nth-child(3) {
             display: flex;
             flex-direction: column;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(1) {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) {
             position: relative;
             top: 40px;
             margin-left: 70px;
@@ -315,25 +362,25 @@
             margin-right: 35px;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(1) > aside:nth-child(1) {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside:nth-child(1) {
             position: absolute;
             left: 0;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(1) > aside:nth-child(2) {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside:nth-child(2) {
             position: absolute;
             left: 550px;
             padding-left: 20px;
             padding-top: 20px;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(1) > aside > img {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > img {
             height: 350px;
             width: 500px;
             border-radius: 20px;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(1) > aside > h1 {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > h1 {
             position: relative;
             font-size: 30px;
             color: white;
@@ -343,7 +390,7 @@
             margin-top: 40px;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(1) > aside > p {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > p {
             position: relative;
             font-size: 17px;
             font-family: 'Arimo', sans-serif;
@@ -353,32 +400,32 @@
             line-height: 1.6;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(2) {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) {
             position: relative;
             height: 450px;
             margin-left: 70px;
             margin-right: 35px;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(2) > aside:nth-child(1) {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside:nth-child(1) {
             position: absolute;
             left: 0;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(2) > aside:nth-child(2) {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside:nth-child(2) {
             position: absolute;
             left: 550px;
             padding-left: 20px;
             padding-top: 20px;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(2) > aside > img {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > img {
             height: 350px;
             width: 500px;
             border-radius: 20px;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(2) > aside > h1 {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > h1 {
             position: relative;
             font-size: 30px;
             color: white;
@@ -388,7 +435,7 @@
             margin-top: 40px;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(2) > aside > p {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > p {
             position: relative;
             font-size: 17px;
             font-family: 'Arimo', sans-serif;
@@ -398,32 +445,32 @@
             line-height: 1.6;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(3) {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) {
             position: relative;
             height: 450px;
             margin-left: 70px;
             margin-right: 35px;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(3) > aside:nth-child(1) {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside:nth-child(1) {
             position: absolute;
             left: 0;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(3) > aside:nth-child(2) {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside:nth-child(2) {
             position: absolute;
             left: 550px;
             padding-left: 20px;
             padding-top: 20px;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(3) > aside > img {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > img {
             height: 350px;
             width: 500px;
             border-radius: 20px;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(3) > aside > h1 {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > h1 {
             position: relative;
             font-size: 30px;
             color: white;
@@ -433,7 +480,7 @@
             margin-top: 40px;
         }
 
-        main > section:nth-child(4) > section:nth-child(4) > div:nth-child(3) > aside > p {
+        main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > p {
             position: relative;
             font-size: 17px;
             font-family: 'Arimo', sans-serif;
@@ -443,13 +490,13 @@
             line-height: 1.6;
         }
 
-        main > section:nth-child(4) > section:nth-child(5) {
+        main > section:nth-child(4) > section:nth-child(4) {
             position: relative;
             width: 100vw;
             margin-bottom: 80px;
         }
 
-        main > section:nth-child(4) > section:nth-child(5) > button {
+        main > section:nth-child(4) > section:nth-child(4) > button {
             width: 300px;
             height: 40px;
             font-size: 18px;
@@ -461,7 +508,7 @@
             margin: auto;
         }
 
-        main > section:nth-child(4) > section:nth-child(5) > button:hover {
+        main > section:nth-child(4) > section:nth-child(4) > button:hover {
             background-color: #c40000;
         }
 
@@ -469,7 +516,7 @@
         /*CONTACT*/
         main > section:nth-child(5) {
             position: relative;
-            width: 100vw;
+            width: 100%;
         }
 
         main > section:nth-child(5) {
@@ -494,7 +541,7 @@
             margin-bottom: 40px;
         }
 
-        main > section:nth-child(5) > h1:nth-child(2) {
+        main > section:nth-child(5) > h1:nth-child(1) {
             position: relative;
             font-size: 50px;
             color: white;
@@ -505,36 +552,37 @@
             text-align: left;
         }
 
-        main > section:nth-child(5) > section:nth-child(6) {
+        main > section:nth-child(5) > section:nth-child(5) {
             display: flex;
             align-items: center;
         }
 
-        main > section:nth-child(5) > section:nth-child(6) > div {
+        main > section:nth-child(5) > section:nth-child(5) > div {
             width: 100vw;
             height: 110px;
             margin-top: 50px;
             margin-bottom: 50px;
         }
 
-        main > section:nth-child(5) > section:nth-child(6) > div > h1{
+        main > section:nth-child(5) > section:nth-child(5) > div > h1{
             color: white;
             font-family: Arimo;
-            font-size: 17px;
+            font-size: 15px;
         }
 
-        main > section:nth-child(5) > section:nth-child(6) > div > h1 > i{
+        main > section:nth-child(5) > section:nth-child(5) > div > h1 > i{
             color: red;
+            font-size: 20px;
         }
 
-        main > section:nth-child(5) > section:nth-child(9) > div > button {
+        main > section:nth-child(5) > section:nth-child(8) > div > button {
             width: 250px;
             height: 40px;
             font-size: 18px;
             margin-bottom: 60px;
         }
 
-        main > section:nth-child(5) > section:nth-child(9) > div > button:hover {
+        main > section:nth-child(5) > section:nth-child(8) > div > button:hover {
             background-color: #c40000;
         }
 
@@ -576,7 +624,7 @@
         footer {
             background-color: #1A1A1A;
             position: absolute;
-            width: 100vw;
+            width: 100%;
         }
         footer > h1{
             color: white;
@@ -607,30 +655,32 @@
 
     </style>
 </head>
+<body>
 <header>
     <nav>
-        <h3 style="font-family: 'Chakra Petch', sans-serif">K.T</h3>
+        <h3 style="font-family: 'Chakra Petch', sans-serif"><a href="#">K.T</a></h3>
     </nav>
     <nav>
         <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Contact</li>
-            <li>About Us</li>
+            <li><a href="#home-section">Home</a></li>
+            <li><a href="#profile-section">Profile</a></li>
+            <li><a href="#services-section">Services</a></li>
+            <li><a href="#projects-section">Project</a></li>
+            <li><a href="#contact-section">Contact</a></li>
         </ul>
     </nav>
 </header>
-
 <main>
-    <section>
-        <dfn id="home-section"></dfn>
+
+    <!-- Home Section -->
+    <section id="home-section">
         <img src="assets/portfolio/programmer-scanning-screen-his-smartwatch-with-smartphone-camera.jpg" alt="Logo">
-        <section>
+        <div>
             <h1>Hi,</h1>
             <h1>I'm Kavindu Thiwanka,</h1>
             <h1>Full Stack Developer.</h1>
-        </section>
-        <section>
+        </div>
+        <div>
             <aside>
                 <img src="assets/portfolio/1.gif" alt="Logo">
             </aside>
@@ -640,15 +690,14 @@
                 <br>
                 <br>
                 <nav>
-                    <h1>View Project <i class="fa-solid fa-arrow-right-long"></i></h1>
+                    <h1><a href="#">View Project <i class="fa-solid fa-arrow-right-long"></i></a></h1>
                 </nav>
             </aside>
-        </section>
+        </div>
     </section>
 
     <!-- Profile Section -->
-    <section>
-        <dfn id="profile-section"></dfn>
+    <section id="profile-section">
         <h1>PROFILE</h1>
         <hr>
         <section>
@@ -660,17 +709,26 @@
                 ability.</p>
 
             <h2><span style="color: red">Tech</span> Stack:</h2>
-            <!-- Image & text -->
+            <section>
+                <div><img src="assets/logo/java.png" alt="logo">JAVA</div>
+                <div><img src="assets/logo/js.png" alt="logo">JAVASCRIPT</div>
+                <div><img src="assets/logo/html-5.png" alt="logo">HTML</div>
+                <div><img src="assets/logo/css-3.png" alt="logo">CSS</div>
+                <div><img src="assets/logo/php.png" alt="logo">PHP</div>
+                <div><img src="assets/logo/python.png" alt="logo">PYTHON</div>
+            </section>
 
         </section>
-        <nav>
-            <h1>CONTACT DETAILS <i class="fa-solid fa-arrow-right-long"></i></h1>
-        </nav>
+        <div>
+            <nav>
+                <h1>CONTACT DETAILS <i class="fa-solid fa-arrow-right-long"></i></h1>
+            </nav>
+        </div>
+
     </section>
 
     <!-- Services Section -->
-    <section>
-        <dfn id="services-section"></dfn>
+    <section id="services-section">
         <h1>SERVICE</h1>
         <hr>
 
@@ -688,14 +746,15 @@
             <dt>UI / UX <span style="color: red">Designing</span></dt>
             <dd>I do design ui/ux for desktop applications, mobile applications,web applications.</dd>
         </dl>
-        <nav>
-            <h1>CONTACT DETAILS <i class="fa-solid fa-arrow-right-long"></i></h1>
-        </nav>
+        <div>
+            <nav>
+                <h1>CONTACT DETAILS <i class="fa-solid fa-arrow-right-long"></i></h1>
+            </nav>
+        </div>
     </section>
 
     <!-- Projects Section -->
-    <section>
-        <dfn id="projects-section"></dfn>
+    <section id="projects-section">
         <h1>PROJECTS</h1>
         <hr>
         <section>
@@ -708,7 +767,6 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur fuga ipsa iusto nam odio
                         optio quisquam repellat saepe voluptatem. Dignissimos facilis impedit laboriosam nobis qui quia
                         repellendus tenetur totam, velit?</p>
-                    </nav>
                 </aside>
             </div>
             <div>
@@ -720,7 +778,6 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur fuga ipsa iusto nam odio
                         optio quisquam repellat saepe voluptatem. Dignissimos facilis impedit laboriosam nobis qui quia
                         repellendus tenetur totam, velit?</p>
-                    </nav>
                 </aside>
             </div>
             <div>
@@ -732,7 +789,6 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur fuga ipsa iusto nam odio
                         optio quisquam repellat saepe voluptatem. Dignissimos facilis impedit laboriosam nobis qui quia
                         repellendus tenetur totam, velit?</p>
-                    </nav>
                 </aside>
             </div>
         </section>
@@ -742,8 +798,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section>
-        <dfn id="contact-section"></dfn>
+    <section id="contact-section">
         <h1>CONTACT</h1>
         <hr>
 
@@ -766,14 +821,14 @@
         <!-- Send Message -->
         <section>
             <div>
-                <input type="text" id="txtCusID" name="UserName" placeholder="  Name" required>
+                <input type="text" id="txtCusID" name="UserName" placeholder="Name" required>
                 <br>
                 <br>
-                <input type="email" id="txtEmail" name="Email" placeholder="  Email" required>
+                <input type="email" id="txtEmail" name="Email" placeholder="Email" required>
                 <br>
                 <br>
                 <textarea name="MessageFromUser" id="txtMessage" cols="100" rows="10"
-                          placeholder="  Message"></textarea>
+                          placeholder="Message"></textarea>
                 <br>
                 <br>
                 <button>SEND MESSAGE</button>
@@ -787,12 +842,11 @@
     <h1 style="font-family: 'Chakra Petch', sans-serif">K.T</h1>
     <h3>Kavindu Thiwanka</h3>
     <div>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/kavindu.thiwanka.925" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/kavindu.thiwank0" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/kavindu-thiwanka-762385239" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/kavindu1thiwanka" target="_blank"><i class="fab fa-github"></i></a>
     </div>
 </footer>
-
 </body>
 </html>

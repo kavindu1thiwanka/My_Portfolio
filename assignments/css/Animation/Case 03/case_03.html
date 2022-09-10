@@ -8,44 +8,73 @@
             position: absolute;
             height: 400px;
             width: 700px;
-            box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.68);
+            box-shadow: 1px 3px 5px 1px #736060;
+            left: 0;
+            right: 0;
             top: 0;
             bottom: 0;
-            right: 0;
-            left: 0;
             margin: auto;
-            animation-name: my-animation;
-            animation-duration: 6s;
-            animation-iteration-count: infinite;
-            animation-direction: normal;
+            overflow: hidden;
         }
 
         main>section{
             height: 100%;
-            width: calc(100%*5);
-            border: 2px solid red;
+            width: 500%;
+            display: flex;
+            animation-name: my-animation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+
+        main > section > div {
+            height: 100%;
+            width: 100%;
+        }
+
+        main > section > div:nth-child(1) {
+            background: url("img/Dragon-Ball.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(2) {
+            background: url("img/naruto g.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(3) {
+            background: url("img/naruto 1.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(4) {
+            background: url("img/one piece g.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(4) {
+            background: url("img/one-piece-ts.jpg");
+            background-size: cover;
+            background-position: center;
         }
 
         @keyframes my-animation {
-            0% {
-                background: url("img/Dragon-Ball.jpg");
-                background-size: cover;
-                background-position: center;
+            0%,20%{
+                transform: translateX(0);
             }
-            25%{
-                background: url("img/naruto g.jpg");
-                background-size: cover;
-                background-position: center;
+            30%,50% {
+                transform: translateX(-20%);
             }
-            50% {
-                background: url("img/naruto 1.png");
-                background-size: cover;
-                background-position: center;
+            60%,80% {
+                transform: translateX(-40%);
             }
-            100% {
-                background: url("img/one piece g.jpg");
-                background-size: cover;
-                background-position: center;
+            90%,100% {
+                transform: translateX(-60%);
             }
 
         }
