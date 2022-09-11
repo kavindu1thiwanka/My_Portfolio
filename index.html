@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>Kavindu Thiwanka</title>
 
-    <base href="localhost">
+<!--    <base href="localhost">-->
     <meta name="description" content="This is my Portfolio">
     <meta name="author" content="Kavindu Thiwanka">
     <meta name="owner" content="Kavindu Thiwanka">
     <meta name="theme-color" content="black">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta name="keyword" content="Kavindu Thiwanka,Kavindu thiwanka,kavindu thiwanka,Kavidu,Kavindu,Kavidu Thiwanka">
 
     <link rel="stylesheet" href="assets/css/fonts/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -260,13 +262,14 @@
             right: 30px;
         }
 
-        main > section:nth-child(2) > div:nth-child(4) > nav > h1 {
+        main > section:nth-child(2) > div:nth-child(4) > nav > h1 > a{
             position: relative;
             color: white;
             font-family: 'Oswald', sans-serif;
+            text-decoration: none;
         }
 
-        main > section:nth-child(2) > div:nth-child(4) > nav > h1 > i {
+        main > section:nth-child(2) > div:nth-child(4) > nav > h1 > a >i {
             color: #1BF458;
             padding-left: 5px;
         }
@@ -321,13 +324,14 @@
             right: 30px;
         }
 
-        main > section:nth-child(3) > div:nth-child(4) > nav > h1 {
+        main > section:nth-child(3) > div:nth-child(4) > nav > h1 > a{
             position: relative;
             color: white;
             font-family: 'Oswald', sans-serif;
+            text-decoration: none;
         }
 
-        main > section:nth-child(3) > div:nth-child(4) > nav > h1 > i {
+        main > section:nth-child(3) > div:nth-child(4) > nav > h1 > a > i {
             color: #1BF458;
             padding-left: 5px;
         }
@@ -690,7 +694,7 @@
                 <br>
                 <br>
                 <nav>
-                    <h1><a href="#">View Project <i class="fa-solid fa-arrow-right-long"></i></a></h1>
+                    <h1><a href="#latest_project">View Project <i class="fa-solid fa-arrow-right-long"></i></a></h1>
                 </nav>
             </aside>
         </div>
@@ -721,7 +725,7 @@
         </section>
         <div>
             <nav>
-                <h1>CONTACT DETAILS <i class="fa-solid fa-arrow-right-long"></i></h1>
+                <h1><a href="#contact-section">CONTACT DETAILS <i class="fa-solid fa-arrow-right-long"></i></a></h1>
             </nav>
         </div>
 
@@ -748,7 +752,7 @@
         </dl>
         <div>
             <nav>
-                <h1>CONTACT DETAILS <i class="fa-solid fa-arrow-right-long"></i></h1>
+                <h1><a href="#contact-section">CONTACT DETAILS <i class="fa-solid fa-arrow-right-long"></i></a></h1>
             </nav>
         </div>
     </section>
@@ -758,7 +762,7 @@
         <h1>PROJECTS</h1>
         <hr>
         <section>
-            <div>
+            <div id="latest_project">
                 <aside>
                     <img src="assets/portfolio/1.gif" alt="Logo">
                 </aside>
