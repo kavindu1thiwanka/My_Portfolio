@@ -9,7 +9,7 @@
     <meta name="author" content="Kavindu Thiwanka">
     <meta name="owner" content="Kavindu Thiwanka">
     <meta name="theme-color" content="black">
-<!--    <meta name="viewport" content="width=device-width initial-scale=1">-->
+    <meta name="viewport" content="width=device-width initial-scale=1">
     <meta name="keyword" content="Kavindu Thiwanka,Kavindu thiwanka,kavindu thiwanka,Kavidu,Kavindu,Kavidu Thiwanka">
 
     <link rel="stylesheet" href="assets/css/fonts/css/all.css">
@@ -74,6 +74,7 @@
             font-size: 20px;
             text-decoration: none;
         }
+
         header > nav:nth-child(2) > ul > li {
             display: inline-block;
 
@@ -94,13 +95,13 @@
             position: relative;
             margin-top: 60px;
             background: #030320;
-            width: 100%;
+            width: 100vw;
         }
 
         main > section:nth-child(1) {
             display: flex;
             flex-direction: column;
-            width: 100%;
+            width: 100vw;
         }
 
         main > section:nth-child(1) > img {
@@ -132,8 +133,8 @@
         main > section:nth-child(1) > div:nth-child(3) > aside:nth-child(1) {
             position: relative;
             left: 0;
-            height: 210px;
-            width: 300px;
+            /*height: 210px;*/
+            /*width: 300px;*/
             padding-left: 20px;
             padding-top: 20px;
 
@@ -145,7 +146,7 @@
             top: 0;
             margin-top: 21px;
             margin-left: 340px;
-            width: 500px;
+            width: 300px;
             padding-left: 20px;
             padding-top: 20px;
         }
@@ -559,6 +560,7 @@
         main > section:nth-child(5) > section:nth-child(5) {
             display: flex;
             align-items: center;
+            overflow: hidden;
         }
 
         main > section:nth-child(5) > section:nth-child(5) > div {
@@ -657,6 +659,840 @@
             color: red;
         }
 
+        @media all and (max-width: 320px){
+            header {
+                height: 70px;
+            }
+            header > nav:nth-child(2) {
+                right: 0px;
+                left: 0px;
+                bottom: 28px;
+                position: relative;
+            }
+
+            header > nav:nth-child(1) {
+                right: 0px;
+                left: 0px;
+                text-align: center;
+                top: -10px;
+                position: relative;
+            }
+
+            header > :nth-child(1) > h3 > a {
+                font-size: 20px;
+                left: 0;
+            }
+            header > nav:nth-child(2) > ul > li > a{
+                font-size: 9px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(2) {
+                top: 55px;
+                left: 40px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(2) > h1 {
+                font-size: 20px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(3) {
+                display: none;
+            }
+
+            main > section:nth-child(2) > h1 {
+                font-size: 30px;
+            }
+
+            main > section:nth-child(2) > section > h1 {
+                font-size: 20px;
+                text-align: center;
+                margin-left: 4px;
+                margin-right: 4px;
+            }
+
+            main > section:nth-child(2) > section > h2 {
+                font-size: 18px;
+            }
+
+            main > section:nth-child(2) > section > p {
+                font-size: 14px;
+                text-align: center;
+                margin-left: 4px;
+                margin-right: 4px;
+            }
+            main > section:nth-child(2) > section > section:nth-child(4) {
+                width: 275px;
+                height: 325px;
+                margin-left: 27px;
+            }
+            main > section:nth-child(2) > section > section:nth-child(4) > div > img {
+                width: 35px;
+                height: 35px;
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+
+            main > section:nth-child(2) > section > section:nth-child(4) > div {
+                font-size: 12px;
+            }
+            main > section:nth-child(2) > div:nth-child(4) > nav > h1 > a{
+                font-size: 15px;
+            }
+
+            main > section:nth-child(3) > h1 {
+                font-size: 30px;
+            }
+            main > section:nth-child(3) > dl > dt {
+                font-size: 21px;
+            }
+            main > section:nth-child(3) > dl > dd {
+                font-size: 14px;
+                margin-bottom: 50px;
+            }
+            main > section:nth-child(3) > div:nth-child(4) > nav > h1 > a{
+                font-size: 15px;
+            }
+
+            main > section:nth-child(4) > h1 {
+                font-size: 30px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) {
+                top: 40px;
+                margin-left: 0px;
+                height: 460px;
+                margin-right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > img {
+                height: 170px;
+                width: 240px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside:nth-child(1) {
+                text-align: center;
+                left: 0px;
+                top: 0px;
+                right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside:nth-child(2) {
+                text-align: center;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > h1 {
+                font-size: 28px;
+                margin-left: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > p {
+                font-size: 14px;
+                margin-left: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) {
+                top: 0px;
+                margin-left: 0px;
+                height: 420px;
+                margin-right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > img {
+                height: 170px;
+                width: 240px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside:nth-child(1) {
+                text-align: center;
+                left: 0px;
+                top: 0px;
+                right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside:nth-child(2) {
+                text-align: center;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > h1 {
+                font-size: 28px;
+                margin-left: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > p {
+                font-size: 14px;
+                margin-left: 0px;
+                margin-bottom: 50px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) {
+                top: 0px;
+                margin-left: 0px;
+                height: 420px;
+                margin-right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > img {
+                height: 170px;
+                width: 240px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside:nth-child(1) {
+                text-align: center;
+                left: 0px;
+                top: 0px;
+                right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside:nth-child(2) {
+                text-align: center;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > h1 {
+                font-size: 28px;
+                margin-left: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > p {
+                font-size: 14px;
+                margin-left: 0px;
+                margin-bottom: 50px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(4) > button {
+                width: 200px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            main > section:nth-child(5) > h1:nth-child(1) {
+                font-size: 30px;
+            }
+
+            main > section:nth-child(5) > h1 {
+                font-size: 26px;
+            }
+
+            main > section:nth-child(5) > h5 {
+                font-size: 10px;
+            }
+
+            main > section:nth-child(5) > section:nth-child(5) > div {
+                height: 70px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            main > section:nth-child(5) > section:nth-child(5) > div > h1{
+                color: white;
+                font-family: Arimo;
+                font-size: 10px;
+            }
+
+            main > section:nth-child(5) > section:nth-child(5) > div > h1 > i{
+                color: red;
+                font-size: 13px;
+            }
+
+            main > section:nth-child(5) > section:nth-child(8) > div > button {
+                width: 200px;
+                height: 35px;
+                font-size: 16px;
+            }
+        }
+
+
+
+        @media all and (min-width: 321px) and (max-width: 375px){
+            header {
+                height: 70px;
+            }
+            header > nav:nth-child(2) {
+                text-align: center;
+                left: 0px;
+                bottom: -12px;
+                right: 0px;
+            }
+
+            header > nav:nth-child(1) {
+                text-align: center;
+                left: 0px;
+                top: -10px;
+                right: 0px;
+                padding-right: 5px;
+            }
+
+            header > :nth-child(1) > h3 > a {
+                font-size: 22px;
+                left: 0;
+            }
+            header > nav:nth-child(2) > ul > li > a{
+                font-size: 10px;
+            }
+            header > nav:nth-child(2) > ul {
+                padding-left: 0;
+            }
+            main > section:nth-child(1) > div:nth-child(2) {
+                top: 55px;
+                left: 40px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(2) > h1 {
+                font-size: 20px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(3) {
+                display: none;
+            }
+
+            main > section:nth-child(2) > h1 {
+                font-size: 30px;
+            }
+
+            main > section:nth-child(2) > section > h1 {
+                font-size: 20px;
+                text-align: center;
+                margin-left: 4px;
+                margin-right: 4px;
+            }
+
+            main > section:nth-child(2) > section > h2 {
+                font-size: 18px;
+            }
+
+            main > section:nth-child(2) > section > p {
+                font-size: 14px;
+                text-align: center;
+                margin-left: 4px;
+                margin-right: 4px;
+            }
+            main > section:nth-child(2) > section > section:nth-child(4) {
+                width: 275px;
+                height: 325px;
+                margin-left: 27px;
+            }
+            main > section:nth-child(2) > section > section:nth-child(4) > div > img {
+                width: 35px;
+                height: 35px;
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+
+            main > section:nth-child(2) > section > section:nth-child(4) > div {
+                font-size: 12px;
+            }
+            main > section:nth-child(2) > div:nth-child(4) > nav > h1 > a{
+                font-size: 15px;
+            }
+
+            main > section:nth-child(3) > h1 {
+                font-size: 30px;
+            }
+            main > section:nth-child(3) > dl > dt {
+                font-size: 21px;
+            }
+            main > section:nth-child(3) > dl > dd {
+                font-size: 14px;
+                margin-bottom: 50px;
+            }
+            main > section:nth-child(3) > div:nth-child(4) > nav > h1 > a{
+                font-size: 15px;
+            }
+
+            main > section:nth-child(4) > h1 {
+                font-size: 30px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) {
+                top: 40px;
+                margin-left: 0px;
+                height: 460px;
+                margin-right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > img {
+                height: 170px;
+                width: 240px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside:nth-child(1) {
+                text-align: center;
+                left: 0px;
+                top: 0px;
+                right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside:nth-child(2) {
+                text-align: center;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > h1 {
+                font-size: 28px;
+                margin-left: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > p {
+                font-size: 14px;
+                margin-left: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) {
+                top: 0px;
+                margin-left: 0px;
+                height: 420px;
+                margin-right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > img {
+                height: 170px;
+                width: 240px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside:nth-child(1) {
+                text-align: center;
+                left: 0px;
+                top: 0px;
+                right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside:nth-child(2) {
+                text-align: center;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > h1 {
+                font-size: 28px;
+                margin-left: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > p {
+                font-size: 14px;
+                margin-left: 0px;
+                margin-bottom: 50px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) {
+                top: 0px;
+                margin-left: 0px;
+                height: 420px;
+                margin-right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > img {
+                height: 170px;
+                width: 240px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside:nth-child(1) {
+                text-align: center;
+                left: 0px;
+                top: 0px;
+                right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside:nth-child(2) {
+                text-align: center;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > h1 {
+                font-size: 28px;
+                margin-left: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > p {
+                font-size: 14px;
+                margin-left: 0px;
+                margin-bottom: 50px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(4) > button {
+                width: 200px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            main > section:nth-child(5) > h1:nth-child(1) {
+                font-size: 30px;
+            }
+
+            main > section:nth-child(5) > h1 {
+                font-size: 26px;
+            }
+
+            main > section:nth-child(5) > h5 {
+                font-size: 10px;
+            }
+
+            main > section:nth-child(5) > section:nth-child(5) > div {
+                height: 70px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            main > section:nth-child(5) > section:nth-child(5) > div > h1{
+                color: white;
+                font-family: Arimo;
+                font-size: 10px;
+            }
+
+            main > section:nth-child(5) > section:nth-child(5) > div > h1 > i{
+                color: red;
+                font-size: 13px;
+            }
+
+            main > section:nth-child(5) > section:nth-child(8) > div > button {
+                width: 200px;
+                height: 35px;
+                font-size: 16px;
+            }
+        }
+        @media all and (min-width: 376px) and (max-width: 425px){
+            header {
+                height: 70px;
+            }
+            header > nav:nth-child(2) {
+                text-align: center;
+                left: 0px;
+                bottom: -14px;
+                right: 0px;
+                justify-content: center;
+            }
+
+            header > nav:nth-child(1) {
+                text-align: center;
+                left: 0px;
+                top: -10px;
+                right: 0px;
+                padding-right: 7px;
+            }
+
+            header > :nth-child(1) > h3 > a {
+                font-size: 24px;
+                left: 0;
+            }
+            header > nav:nth-child(2) > ul > li > a{
+                font-size: 11px;
+            }
+            header > nav:nth-child(2) > ul {
+                padding-left: 0;
+            }
+            main > section:nth-child(1) > div:nth-child(2) {
+                top: 55px;
+                left: 40px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(2) > h1 {
+                font-size: 20px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(3) {
+                display: none;
+            }
+
+            main > section:nth-child(2) > h1 {
+                font-size: 30px;
+            }
+
+            main > section:nth-child(2) > section > h1 {
+                font-size: 20px;
+                text-align: center;
+                margin-left: 4px;
+                margin-right: 4px;
+            }
+
+            main > section:nth-child(2) > section > h2 {
+                font-size: 18px;
+            }
+
+            main > section:nth-child(2) > section > p {
+                font-size: 14px;
+                text-align: center;
+                margin-left: 4px;
+                margin-right: 4px;
+            }
+            main > section:nth-child(2) > section > section:nth-child(4) {
+                width: 275px;
+                height: 325px;
+                margin-left: 27px;
+            }
+            main > section:nth-child(2) > section > section:nth-child(4) > div > img {
+                width: 35px;
+                height: 35px;
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+
+            main > section:nth-child(2) > section > section:nth-child(4) > div {
+                font-size: 12px;
+            }
+            main > section:nth-child(2) > div:nth-child(4) > nav > h1 > a{
+                font-size: 15px;
+            }
+
+            main > section:nth-child(3) > h1 {
+                font-size: 30px;
+            }
+            main > section:nth-child(3) > dl > dt {
+                font-size: 21px;
+            }
+            main > section:nth-child(3) > dl > dd {
+                font-size: 14px;
+                margin-bottom: 50px;
+            }
+            main > section:nth-child(3) > div:nth-child(4) > nav > h1 > a{
+                font-size: 15px;
+            }
+
+            main > section:nth-child(4) > h1 {
+                font-size: 30px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) {
+                top: 40px;
+                margin-left: 0px;
+                height: 460px;
+                margin-right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > img {
+                height: 170px;
+                width: 240px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside:nth-child(1) {
+                text-align: center;
+                left: 0px;
+                top: 0px;
+                right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside:nth-child(2) {
+                text-align: center;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > h1 {
+                font-size: 28px;
+                margin-left: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > p {
+                font-size: 14px;
+                margin-left: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) {
+                top: 0px;
+                margin-left: 0px;
+                height: 420px;
+                margin-right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > img {
+                height: 170px;
+                width: 240px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside:nth-child(1) {
+                text-align: center;
+                left: 0px;
+                top: 0px;
+                right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside:nth-child(2) {
+                text-align: center;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > h1 {
+                font-size: 28px;
+                margin-left: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > p {
+                font-size: 14px;
+                margin-left: 0px;
+                margin-bottom: 50px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) {
+                top: 0px;
+                margin-left: 0px;
+                height: 420px;
+                margin-right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > img {
+                height: 170px;
+                width: 240px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside:nth-child(1) {
+                text-align: center;
+                left: 0px;
+                top: 0px;
+                right: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside:nth-child(2) {
+                text-align: center;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > h1 {
+                font-size: 28px;
+                margin-left: 0px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > p {
+                font-size: 14px;
+                margin-left: 0px;
+                margin-bottom: 50px;
+            }
+
+            main > section:nth-child(4) > section:nth-child(4) > button {
+                width: 200px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            main > section:nth-child(5) > h1:nth-child(1) {
+                font-size: 30px;
+            }
+
+            main > section:nth-child(5) > h1 {
+                font-size: 26px;
+            }
+
+            main > section:nth-child(5) > h5 {
+                font-size: 10px;
+            }
+
+            main > section:nth-child(5) > section:nth-child(5) > div {
+                height: 70px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            main > section:nth-child(5) > section:nth-child(5) > div > h1{
+                color: white;
+                font-family: Arimo;
+                font-size: 10px;
+            }
+
+            main > section:nth-child(5) > section:nth-child(5) > div > h1 > i{
+                color: red;
+                font-size: 13px;
+            }
+
+            main > section:nth-child(5) > section:nth-child(8) > div > button {
+                width: 200px;
+                height: 35px;
+                font-size: 16px;
+            }
+        }
+
+        @media all and (min-width: 426px) and (max-width: 768px){
+            main > section:nth-child(1) > div:nth-child(2) > h1 {
+                font-size: 46px;
+            }
+            main > section:nth-child(1) > div:nth-child(3) {
+                top: 280px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(3) > aside > img {
+                height: 170px;
+                width: 240px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(3) > aside:nth-child(2) {
+                margin-top: 0px;
+                margin-left: 275px;
+                width: 300px;
+                padding-top: 45px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(3) > aside:nth-child(2) > h1 {
+                font-size: 24px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(3) > aside:nth-child(2) > h5 {
+                font-size: 14px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(3) > aside:nth-child(2) > nav > h1 > a {
+                font-size: 14px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(3) > aside:nth-child(2) > nav > h1 {
+                margin-top: 0;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > img {
+                height: 260px;
+                width: 360px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > img {
+                height: 260px;
+                width: 360px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > img {
+                height: 260px;
+                width: 360px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside:nth-child(2) {
+                left: 360px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside:nth-child(2) {
+                left: 360px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside:nth-child(2) {
+                left: 360px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > aside > h1 {
+                font-size: 28px;
+                margin-top: -30px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > aside > h1 {
+                font-size: 28px;
+                margin-top: -30px;
+            }
+            main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > aside > h1 {
+                font-size: 28px;
+                margin-top: -30px;
+            }
+        }
     </style>
 </head>
 <body>
