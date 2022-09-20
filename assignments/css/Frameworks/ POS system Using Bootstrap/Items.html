@@ -19,26 +19,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Customers</a>
+          <a class="nav-link" href="Customers.html">Customers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Order</a>
+          <a class="nav-link" href="Order.html">Order</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Items</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Others
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+          <a class="nav-link bg-primary bg-opacity-25 rounded active" href="Items.html">Items</a>
         </li>
       </ul>
     </div>
@@ -48,72 +38,62 @@
 
 <br>
 
-<p>Items</p>
+<main class="container-fluid">
+  <section class="row ms-2 me-2">
+    <div class="col-10">
+      <p>Items</p>
+    </div>
+    <div class="col-2">
+      <button class="btn btn-outline-success" type="submit">Add Item</button>
+    </div>
+    <br><br>
+    <hr>
+    <div class="col-12">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+    <br><br><br>
+    <table class="table table-bordered table-hover col-12">
+    <thead>
+    <tr>
+      <th scope="col">Item ID</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Qty</th>
+      <th scope="col">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+    </tbody>
+  </table>
 
-<button class="btn btn-outline-success" type="submit">Add Item</button>
+    <div class="modal-footer col-12">
+    <button class="btn btn-danger me-2" data-bs-dismiss="modal" type="button">Delete Item</button>
 
-<hr>
+    <button class="btn btn-success me-2" type="button">Update Item</button>
 
-<form class="d-flex" role="search">
-  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-  <button class="btn btn-outline-success" type="submit">Search</button>
-</form>
-
-<br>
-
-<table class="table table-bordered table-hover">
-  <thead>
-  <tr>
-    <th scope="col">Item ID</th>
-    <th scope="col">Item Name</th>
-    <th scope="col">Qty</th>
-    <th scope="col">Price</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th scope="row">1</th>
-    <td>Mark</td>
-    <td>Otto</td>
-    <td>@mdo</td>
-  </tr>
-  <tr>
-    <th scope="row">2</th>
-    <td>Jacob</td>
-    <td>Thornton</td>
-    <td>@fat</td>
-  </tr>
-  <tr>
-    <th scope="row">3</th>
-    <td colspan="2">Larry the Bird</td>
-    <td>@twitter</td>
-  </tr>
-  </tbody>
-</table>
-
-<div class="modal-footer">
-  <button class="btn btn-danger me-2" data-bs-dismiss="modal" type="button">Delete Item</button>
-
-  <button class="btn btn-success me-2" type="button">Update Item</button>
-
-  <button class="btn btn-warning me-2" type="button">Get All Item Details</button>
-</div>
-<!--<section class="row">-->
-
-<!--  <div class="col-12">-->
-<!--    <h1>Customer</h1>-->
-<!--  </div>-->
-<!--  <br>-->
-<!--  <br>-->
-<!--  <br>-->
-<!--  <div class="col-10">-->
-<!--    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
-<!--  </div>-->
-
-<!--  <div class="col-2">-->
-<!--    <button class="btn btn-outline-success" type="submit">Search</button>-->
-<!--  </div>-->
-<!--</section>-->
+    <button class="btn btn-warning me-2" type="button">Get All Item Details</button>
+  </div>
+  </section>
+</main>
 
 <script src="assets/js/bootstrap.min.js"></script>
 </body>

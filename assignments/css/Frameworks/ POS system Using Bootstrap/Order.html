@@ -19,26 +19,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Customers</a>
+          <a class="nav-link" href="Customers.html">Customers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Order</a>
+          <a class="nav-link bg-primary bg-opacity-25 rounded active" href="Order.html">Order</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Items</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Others
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+          <a class="nav-link" href="Items.html">Items</a>
         </li>
       </ul>
     </div>
@@ -48,134 +38,129 @@
 
 <!--content-->
 
-<div class="row border border-white shadow">
-  <div class="col-12 bg-success">
-    <p>Invoice Details</p>
-  </div>
-  <div class="row">
-    <div class="col-6">
-      <label for="formGroupExampleInput" class="form-label">Example label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+<main class="container-fluid">
+  <section class="row ms-2 me-2">
+    <div class="row border border-white card col-6 me-2 mt-3 shadow-sm ">
+      <div class="card-header bg-success">
+        <p>Invoice Details</p>
+      </div>
+      <div class="row card-body">
+        <div class="col-6">
+          <label for="formGroupExampleInput" class="form-label">Example label</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+        </div>
+        <div class="col-6">
+          <label for="formGroupExampleInput" class="form-label">Example label</label>
+          <input type="date" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+        </div>
+        <div class="col-6">
+          <label for="formGroupExampleInput" class="form-label">Example label</label>
+          <select class="form-control" aria-label="Default select example" >
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col-6">
+          <label for="formGroupExampleInput" class="form-label">Example label</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+        </div>
+        <div class="col-6">
+          <label for="formGroupExampleInput" class="form-label">Example label</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+        </div>
+        <div class="col-6">
+          <label for="formGroupExampleInput" class="form-label">Example label</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+        </div>
+        <div class="col-12">
+          <label for="formGroupExampleInput" class="form-label">Example label</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+        </div>
+      </div>
+      <br><br>
     </div>
-    <div class="col-6">
-      <label for="formGroupExampleInput" class="form-label">Example label</label>
-      <input type="date" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+    <div class="row border border-white card col-6 ms-2 mt-3 shadow-sm">
+      <div class="card-header col-12 bg-success">
+        <p>Item Select</p>
+      </div>
+      <div class="row card-body">
+        <div class="col-6">
+          <label for="formGroupExampleInput" class="form-label">Example label</label>
+          <select class="form-control" aria-label="Default select example" >
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col-6">
+          <label for="formGroupExampleInput" class="form-label">Example label</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+        </div>
+        <div class="col-4">
+          <label for="formGroupExampleInput" class="form-label">Example label</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+        </div>
+        <div class="col-4">
+          <label for="formGroupExampleInput" class="form-label">Example label</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+        </div>
+        <div class="col-4">
+          <label for="formGroupExampleInput" class="form-label">Example label</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+        </div>
+        <div class="col-12">
+          <label for="formGroupExampleInput" class="form-label">Example label</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+          <br>
+        </div>
+        <div class="modal-footer col-12">
+          <button class="btn btn-danger" type="button">Add Item</button>
+        </div>
+      </div>
     </div>
-    <div class="col-6">
-      <label for="formGroupExampleInput" class="form-label">Example label</label>
-      <select class="form-control" aria-label="Default select example" >
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
+    <div class="row card col-3 me-2 mt-2 shadow-sm">
+      <p>Total</p>
+      <p>SubTotal</p>
+      <div class="col-6">
+        <label for="formGroupExampleInput" class="form-label">Example label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+      </div>
+      <div class="col-6">
+        <label for="formGroupExampleInput" class="form-label">Example label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+      </div>
+      <div class="col-12">
+        <label for="formGroupExampleInput" class="form-label">Example label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+      </div><br>
+      <button class="btn btn-danger align-items-center col-6" type="button">Add Item</button>
+      <br>
     </div>
-    <div class="col-6">
-      <label for="formGroupExampleInput" class="form-label">Example label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+    <div class="col-9  mt-2">
+      <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+          <th scope="col">Order ID</th>
+          <th scope="col">Customer Name</th>
+          <th scope="col">Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
-    <div class="col-6">
-      <label for="formGroupExampleInput" class="form-label">Example label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-    </div>
-    <div class="col-6">
-      <label for="formGroupExampleInput" class="form-label">Example label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-    </div>
-    <div class="col-12">
-      <label for="formGroupExampleInput" class="form-label">Example label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-    </div>
-    <br><br><br><br>
-  </div>
-</div>
+  </section>
+</main>
 
-<div class="row border border-white shadow">
-  <div class="col-12 bg-success">
-    <p>Item Select</p>
-  </div>
-  <div class="row">
 
-    <div class="col-6">
-      <label for="formGroupExampleInput" class="form-label">Example label</label>
-      <select class="form-control" aria-label="Default select example" >
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-    </div>
-    <div class="col-6">
-      <label for="formGroupExampleInput" class="form-label">Example label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-    </div>
-    <div class="col-4">
-      <label for="formGroupExampleInput" class="form-label">Example label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-    </div>
-    <div class="col-4">
-      <label for="formGroupExampleInput" class="form-label">Example label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-    </div>
-    <div class="col-4">
-      <label for="formGroupExampleInput" class="form-label">Example label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-    </div>
-    <div class="col-12">
-      <label for="formGroupExampleInput" class="form-label">Example label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-danger" type="button">Add Item</button>
-    </div>
-    <br><br><br><br>
-  </div>
-</div>
-
-<div class="row">
-  <p>Total</p>
-  <p>SubTotal</p>
-  <div class="col-6">
-    <label for="formGroupExampleInput" class="form-label">Example label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-  </div>
-  <div class="col-6">
-    <label for="formGroupExampleInput" class="form-label">Example label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-  </div>
-  <div class="col-12">
-    <label for="formGroupExampleInput" class="form-label">Example label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-  </div>
-    <button class="btn btn-danger align-items-center col-1" type="button">Add Item</button>
-</div>
-
-<table class="table table-bordered table-hover">
-  <thead>
-  <tr>
-    <th scope="col">Order ID</th>
-    <th scope="col">Customer Name</th>
-    <th scope="col">Price</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th scope="row">1</th>
-    <td>Mark</td>
-    <td>Otto</td>
-  </tr>
-  <tr>
-    <th scope="row">2</th>
-    <td>Jacob</td>
-    <td>Thornton</td>
-  </tr>
-  <tr>
-    <th scope="row">3</th>
-    <td>Larry the Bird</td>
-    <td>@twitter</td>
-  </tr>
-  </tbody>
-</table>
 
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
