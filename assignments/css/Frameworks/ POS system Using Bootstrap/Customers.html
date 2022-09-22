@@ -5,14 +5,22 @@
   <title>POS System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body{
+      background: #e6ecff;
+    }
+  </style>
 </head>
 
-<body class="bg-light">
+<body>
 
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg bg-light shadow">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/shopping%20logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      POS System
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,73 +33,78 @@
           <a class="nav-link bg-primary bg-opacity-25 rounded active" href="Customers.html">Customers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Order.html">Order</a>
+        <a class="nav-link" href="Items.html">Items</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Items.html">Items</a>
+          <a class="nav-link" href="Order.html">Order</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 <!--Navbar End-->
-<br>
 
-<main class="container-fluid" >
-  <section class="row ms-2 me-2">
+<main class="container-fluid">
+  <section class="container-fluid row mt-4 ms-0 me-0">
+    <div class="row bg-white border rounded ms-0 me-0">
 
-    <div class="col-10">
-      <p>Customer</p>
-    </div>
-    <div class="col-2">
-      <button class="btn btn-outline-success " type="submit">Add Customer</button>
-    </div>
-    <br><br>
-    <hr>
-    <div class="col-12">
-      <form class="d-flex" role="search">
+<!--  Heading-->
+      <div class="col-12 d-flex justify-content-between mt-3">
+        <h3>Customer</h3>
+        <button class="btn btn-outline-success" type="submit">Add Customer</button>
+      </div>
+
+<!--  Search Bar-->
+      <div class="col-12">
+      <hr>
+      <div class="d-flex mb-4 justify-content-between" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-    <br><br><br>
+      </div>
+      </div>
 
-    <table class="table table-bordered table-hover col-12">
-      <thead>
-      <tr>
-        <th scope="col">Customer ID</th>
-        <th scope="col">Name</th>
-        <th scope="col">Address</th>
-        <th scope="col">Tel</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-      </tbody>
-    </table>
+<!--  Table-->
+      <div class="col-12">
+        <table class="table table-bordered table-hover col-12">
+          <thead>
+          <tr>
+            <th scope="col">Customer ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Tel</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <div class="modal-footer col-12">
+<!--  Button-->
+      <div class="modal-footer col-12 mb-3">
+
       <button class="btn btn-danger me-1" data-bs-dismiss="modal" type="button">Delete Customer</button>
 
       <button class="btn btn-success me-1" type="button">Update Customer</button>
 
       <button class="btn btn-warning me-1" type="button">Get All Customer Details</button>
+    </div>
     </div>
   </section>
 </main>

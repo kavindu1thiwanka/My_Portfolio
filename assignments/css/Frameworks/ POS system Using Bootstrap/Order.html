@@ -5,6 +5,12 @@
   <title>POS System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/Style.css" rel="stylesheet">
+  <style>
+    body{
+      background: #e6ecff;
+    }
+  </style>
 </head>
 
 <body>
@@ -12,7 +18,10 @@
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg bg-light shadow">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/shopping%20logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      POS System
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,10 +34,10 @@
           <a class="nav-link" href="Customers.html">Customers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link bg-primary bg-opacity-25 rounded active" href="Order.html">Order</a>
-        </li>
+        <a class="nav-link" href="Items.html">Items</a>
+      </li>
         <li class="nav-item">
-          <a class="nav-link" href="Items.html">Items</a>
+          <a class="nav-link bg-primary bg-opacity-25 rounded active" href="Order.html">Order</a>
         </li>
       </ul>
     </div>
@@ -37,134 +46,196 @@
 <!--Navbar End-->
 
 <!--content-->
-
 <main class="container-fluid">
-  <section class="row ms-2 me-2">
-    <div class="row border border-white card col-6 me-2 mt-3 shadow-sm ">
-      <div class="card-header bg-success">
-        <p>Invoice Details</p>
-      </div>
-      <div class="row card-body">
-        <div class="col-6">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+  <section class="container-fluid row mt-4 ms-0 me-0">
+
+    <!--  Invoice Details-->
+    <div class="col-6">
+      <div class="row bg-white border rounded p-2">
+        <div class="col-12 rounded-top border-top border-start border-end" style="height: calc(100%/5); background: #e6e6e6; border-color: #d9d9d9">
+          <h1>Invoice Details</h1>
         </div>
-        <div class="col-6">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <input type="date" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-        </div>
-        <div class="col-6">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <select class="form-control" aria-label="Default select example" >
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-        <div class="col-6">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-        </div>
-        <div class="col-6">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-        </div>
-        <div class="col-6">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-        </div>
-        <div class="col-12">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-        </div>
-      </div>
-      <br><br>
-    </div>
-    <div class="row border border-white card col-6 ms-2 mt-3 shadow-sm">
-      <div class="card-header col-12 bg-success">
-        <p>Item Select</p>
-      </div>
-      <div class="row card-body">
-        <div class="col-6">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <select class="form-control" aria-label="Default select example" >
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-        <div class="col-6">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-        </div>
-        <div class="col-4">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-        </div>
-        <div class="col-4">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-        </div>
-        <div class="col-4">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-        </div>
-        <div class="col-12">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-          <br>
-        </div>
-        <div class="modal-footer col-12">
-          <button class="btn btn-danger" type="button">Add Item</button>
+        <div class="col-12 row border-bottom border-start border-end m-0" style="border-color: #d9d9d9">
+          <div class="col-6 pb-1">
+            <label for="orderId" class="form-label">Order ID</label>
+            <input type="text" class="form-control" id="orderId" placeholder="ID">
+          </div>
+          <div class="col-6 pb-1">
+            <label for="lblDate" class="form-label">Date</label>
+            <input type="date" class="form-control" id="lblDate" placeholder="Example input placeholder">
+          </div>
+          <div class="col-6 pb-1">
+            <label for="lblCustomer" class="form-label">Customer</label>
+            <select class="form-control" id="lblCustomer" aria-label="Default select example" >
+              <option selected >Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="col-6 pb-1">
+            <label for="lblCustomerId" class="form-label">Customer ID</label>
+            <input type="text" class="form-control" id="lblCustomerId" placeholder="ID">
+          </div>
+          <div class="col-6 pb-1">
+            <label for="lblName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="lblName" placeholder="Name">
+          </div>
+          <div class="col-6 pb-1">
+            <label for="lblTel" class="form-label">Contact No</label>
+            <input type="text" class="form-control" id="lblTel" placeholder="0771236549">
+          </div>
+          <div class="col-12 pb-4">
+            <label for="lblAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="lblAddress" placeholder="Galle">
+          </div>
         </div>
       </div>
     </div>
-    <div class="row card col-5 me-2 mt-2 shadow-sm">
-      <br>
-      <p>Total</p>
-      <p>SubTotal</p>
-      <div class="row col-12">
-        <div class="col-6">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+
+    <!--  Item Select-->
+    <div class="col-6 ps-3 pe-0">
+      <div class="row bg-white border rounded p-2">
+        <div class="col-12 rounded-top border-top border-start border-end" style="height: calc(100%/5); background: #e6e6e6; border-color: #d9d9d9">
+          <h1>Item Select</h1>
         </div>
-        <div class="col-6">
-          <label for="formGroupExampleInput" class="form-label">Example label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+        <div class="col-12 row pt-2 border-bottom border-start border-end m-0" style="border-color: #d9d9d9">
+          <div class="col-6 pb-3">
+            <label for="lblItemCode" class="form-label">Item Code</label>
+            <select class="form-control" id="lblItemCode" aria-label="Default select example" >
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="col-6 pb-3">
+            <label for="lblItem" class="form-label">Item Name</label>
+            <input type="text" class="form-control" id="lblItem" placeholder="Name">
+          </div>
+          <div class="col-6 pb-3">
+            <label for="lblPrice" class="form-label">Price</label>
+            <input type="text" class="form-control" id="lblPrice" placeholder="Example input placeholder">
+          </div>
+          <div class="col-6 pb-3">
+            <label for="qtyOnH" class="form-label">Qty On Hand</label>
+            <input type="text" class="form-control" id="qtyOnH" placeholder="Example input placeholder">
+          </div>
+          <div class="col-12 pb-3">
+            <label for="orderQty" class="form-label">Order Quantity</label>
+            <input type="text" class="form-control" id="orderQty" placeholder="Example input placeholder">
+          </div>
+          <div class="modal-footer col-12 pb-2">
+            <button class="btn btn-danger" type="button">Add Item</button>
+          </div>
+        </div>
         </div>
       </div>
 
-      <div class="col-12">
-        <label for="formGroupExampleInput" class="form-label">Example label</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-      </div><br>
-      <button class="btn btn-danger align-items-center col-6" type="button">Add Item</button>
-      <br>
+    <!--  Total & SubTotal-->
+    <div class="col-3 pt-2">
+      <div class="row bg-white border rounded p-2">
+        <section class="content-box-2 p-4 ">
+          <div class="row">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12">
+                  <span class="" id="total-text">Total : </span>
+                </div>
+                <div class="col-12">
+                  <span id="total">00.0</span> Rs/=
+                </div>
+              </div>
+
+            </div>
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12">
+                  <span id="total-text1">SubTotal : </span>
+                </div>
+                <div class="col-12">
+                  <span id="subtotal">00.0</span> Rs/=
+                </div>
+              </div>
+
+            </div>
+            <div class="col-6 mt-2">
+              <div class="form-group">
+                <label>Cash</label>
+                <input class="form-control" id="txtCash" min="0" type="number">
+                <span class="control-error"
+                      id="cash-empty-error"></span>
+              </div>
+            </div>
+            <div class="col-6 mt-2">
+              <div class="form-group">
+                <label>Discount</label>
+                <input class="form-control" id="txtDiscount" min="0" type="number">
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="form-group">
+                <label>Balance</label>
+                <input class="form-control" id="txtBalance" type="text">
+              </div>
+            </div>
+            <div class="col-4 mt-4 ps-0">
+              <button class="btn btn-success" id="btnSubmitOrder" type="button">Purchase</button>
+            </div>
+          </div>
+        </section>
+      </div>>
+
     </div>
-    <div class="col-7  mt-2">
-      <table class="table table-bordered table-hover">
-        <thead>
-        <tr>
-          <th scope="col">Order ID</th>
-          <th scope="col">Customer Name</th>
-          <th scope="col">Price</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-        </tr>
-        </tbody>
-      </table>
+
+    <!--  Table-->
+    <div class="col-9 pt-2 ps-3 pe-0">
+      <div class="row bg-white border rounded p-2">
+        <table class="table table-bordered table-hover">
+          <thead>
+          <tr>
+            <th scope="col">Order ID</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Price</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>D001</td>
+            <td>Amal</td>
+            <td>1000.0</td>
+          </tr>
+          <tr>
+            <td>D002</td>
+            <td>Supun</td>
+            <td>350.0</td>
+          </tr>
+          <tr>
+            <td>D003</td>
+            <td>Nilanthi</td>
+            <td>1200.0</td>
+          </tr>
+          <tr>
+            <td>D004</td>
+            <td>Jinadasa</td>
+            <td>1000.0</td>
+          </tr>
+          <tr>
+            <td>D005</td>
+            <td>Upul</td>
+            <td>800.0</td>
+          </tr>
+          <tr>
+            <td>D006</td>
+            <td>Nethmi</td>
+            <td>1450.0</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 </main>
-
-
 
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
