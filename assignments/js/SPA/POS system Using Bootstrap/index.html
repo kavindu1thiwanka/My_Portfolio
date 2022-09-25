@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>POS System</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="assets/css/Style.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/Fontawesome/all.min.css" rel="stylesheet">
@@ -16,17 +16,16 @@
 </head>
 
 <body>
-
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg bg-light shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="assets/img/shopping%20logo.png" alt="Logo" width="30" height="24"
-                 class="d-inline-block align-text-top">
+            <img alt="Logo" class="d-inline-block align-text-top" height="24" src="assets/img/shopping%20logo.png"
+                 width="30">
             POS System
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -47,7 +46,7 @@
         </div>
     </div>
 </nav>
-<!--Navbar End-->
+
 
 <!--Dashboard content-->
 <main class="container-fluid" id="dashboardContent">
@@ -152,7 +151,6 @@
         </section>
     </div>
 </main>
-<!--Dashboard content End-->
 
 
 <!--Customer content-->
@@ -173,7 +171,7 @@
             <div class="col-12">
                 <hr>
                 <div class="d-flex mb-4 justify-content-between" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </div>
             </div>
@@ -335,7 +333,6 @@
         </div>
     </div>
 </div>
-<!--Customer content End-->
 
 
 <!--Item content-->
@@ -356,7 +353,7 @@
             <div class="col-12">
                 <hr>
                 <div class="d-flex mb-4 justify-content-between" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </div>
             </div>
@@ -517,7 +514,6 @@
         </div>
     </div>
 </div>
-<!--Item content End-->
 
 <!--Order content-->
 <main class="container-fluid" id="orderContent">
@@ -532,16 +528,16 @@
                 </div>
                 <div class="col-12 row border-bottom border-start border-end m-0" style="border-color: #d9d9d9">
                     <div class="col-6 pb-1">
-                        <label for="orderId" class="form-label">Order ID</label>
-                        <input type="text" class="form-control" id="orderId" placeholder="ID">
+                        <label class="form-label" for="orderId">Order ID</label>
+                        <input class="form-control" id="orderId" placeholder="ID" type="text">
                     </div>
                     <div class="col-6 pb-1">
-                        <label for="lblDate" class="form-label">Date</label>
-                        <input type="date" class="form-control" id="lblDate" placeholder="Example input placeholder">
+                        <label class="form-label" for="lblDate">Date</label>
+                        <input class="form-control" id="lblDate" placeholder="Example input placeholder" type="date">
                     </div>
                     <div class="col-6 pb-1">
-                        <label for="lblCustomer" class="form-label">Customer</label>
-                        <select class="form-control" id="lblCustomer" aria-label="Default select example">
+                        <label class="form-label" for="lblCustomer">Customer</label>
+                        <select aria-label="Default select example" class="form-control" id="lblCustomer">
                             <option selected>Open this select menu</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -549,20 +545,20 @@
                         </select>
                     </div>
                     <div class="col-6 pb-1">
-                        <label for="lblCustomerId" class="form-label">Customer ID</label>
-                        <input type="text" class="form-control" id="lblCustomerId" placeholder="ID">
+                        <label class="form-label" for="lblCustomerId">Customer ID</label>
+                        <input class="form-control" id="lblCustomerId" placeholder="ID" type="text">
                     </div>
                     <div class="col-6 pb-1">
-                        <label for="lblName" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="lblName" placeholder="Name">
+                        <label class="form-label" for="lblName">Name</label>
+                        <input class="form-control" id="lblName" placeholder="Name" type="text">
                     </div>
                     <div class="col-6 pb-1">
-                        <label for="lblTel" class="form-label">Contact No</label>
-                        <input type="text" class="form-control" id="lblTel" placeholder="0771236549">
+                        <label class="form-label" for="lblTel">Contact No</label>
+                        <input class="form-control" id="lblTel" placeholder="0771236549" type="text">
                     </div>
                     <div class="col-12 pb-4">
-                        <label for="lblAddress" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="lblAddress" placeholder="Galle">
+                        <label class="form-label" for="lblAddress">Address</label>
+                        <input class="form-control" id="lblAddress" placeholder="Galle" type="text">
                     </div>
                 </div>
             </div>
@@ -577,8 +573,8 @@
                 </div>
                 <div class="col-12 row pt-2 border-bottom border-start border-end m-0" style="border-color: #d9d9d9">
                     <div class="col-6 pb-3">
-                        <label for="lblItemCode" class="form-label">Item Code</label>
-                        <select class="form-control" id="lblItemCode" aria-label="Default select example">
+                        <label class="form-label" for="lblItemCode">Item Code</label>
+                        <select aria-label="Default select example" class="form-control" id="lblItemCode">
                             <option selected>Open this select menu</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -586,20 +582,20 @@
                         </select>
                     </div>
                     <div class="col-6 pb-3">
-                        <label for="lblItem" class="form-label">Item Name</label>
-                        <input type="text" class="form-control" id="lblItem" placeholder="Name">
+                        <label class="form-label" for="lblItem">Item Name</label>
+                        <input class="form-control" id="lblItem" placeholder="Name" type="text">
                     </div>
                     <div class="col-6 pb-3">
-                        <label for="lblPrice" class="form-label">Price</label>
-                        <input type="text" class="form-control" id="lblPrice" placeholder="100.0">
+                        <label class="form-label" for="lblPrice">Price</label>
+                        <input class="form-control" id="lblPrice" placeholder="100.0" type="text">
                     </div>
                     <div class="col-6 pb-3">
-                        <label for="qtyOnH" class="form-label">Qty On Hand</label>
-                        <input type="text" class="form-control" id="qtyOnH" placeholder="100">
+                        <label class="form-label" for="qtyOnH">Qty On Hand</label>
+                        <input class="form-control" id="qtyOnH" placeholder="100" type="text">
                     </div>
                     <div class="col-12 pb-3">
-                        <label for="orderQty" class="form-label">Order Quantity</label>
-                        <input type="text" class="form-control" id="orderQty" placeholder="Qty">
+                        <label class="form-label" for="orderQty">Order Quantity</label>
+                        <input class="form-control" id="orderQty" placeholder="Qty" type="text">
                     </div>
                     <div class="modal-footer col-12 pb-2">
                         <button class="btn btn-danger" type="button">Add Item</button>
@@ -610,7 +606,7 @@
 
         <!--  Total & SubTotal-->
         <div class="col-3 pt-2">
-            <div class="row bg-white border rounded p-2">
+            <div class="row bg-white border rounded p-2" id="totalSubtotalDiv">
                 <section class="content-box-2 p-4 ">
                     <div class="row">
                         <div class="col-12">
@@ -666,7 +662,7 @@
 
         <!--  Table-->
         <div class="col-9 pt-2 ps-3 pe-0">
-            <div class="row bg-white border rounded p-2">
+            <div class="row bg-white border rounded p-2" style="height: 340px; overflow-y: scroll">
                 <table class="table table-bordered table-hover">
                     <thead>
                     <tr>
@@ -726,7 +722,6 @@
         </div>
     </section>
 </main>
-<!--Order content End-->
 
 
 <script src="assets/js/bootstrap.min.js"></script>
