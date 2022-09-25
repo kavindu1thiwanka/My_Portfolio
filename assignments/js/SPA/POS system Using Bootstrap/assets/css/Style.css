@@ -1,0 +1,40 @@
+#title-text{
+    color: #1b5e20;
+    font-size: 2em;
+}
+#title-text:hover{
+    color: #00695c;
+}
+
+#total-text{
+    color: #3d98ef;
+    font-size: 13px;
+}
+#total-text1{
+    color: #ef5350;
+    font-size: 13px;
+}
+
+#total{
+    font-size: 30px;
+    color: #3d98ef;
+}
+#subtotal{
+    color: #ef5350;
+    font-size: 30px;
+}
+
+.dash-2col{
+    height: 150px;
+    align-items: center;
+    margin-top: 10px;
+    background: #ffffff;
+}
+
+.dash-col{
+    height: 200px;
+}
+
+.table-style{
+    background: #ffffff;
+}
