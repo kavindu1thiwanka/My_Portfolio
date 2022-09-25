@@ -5,6 +5,7 @@
   <title>POS System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/Fontawesome/all.min.css" rel="stylesheet">
   <style>
     body{
       background: #e6ecff;
@@ -51,7 +52,9 @@
 <!--  Heading-->
       <div class="col-12 d-flex justify-content-between mt-3">
         <h3>Customer</h3>
-        <button class="btn btn-outline-success" type="submit">Add Customer</button>
+        <button class="btn btn-outline-success" data-bs-target="#AddCustomerModal" data-bs-toggle="modal" type="button">
+          Add Customer
+        </button>
       </div>
 
 <!--  Search Bar-->
@@ -89,8 +92,9 @@
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
+            <td>Larry the Bird</td>
             <td>@twitter</td>
+            <td>@mdo</td>
           </tr>
           </tbody>
         </table>
@@ -98,16 +102,128 @@
 
 <!--  Button-->
       <div class="modal-footer col-12 mb-3">
-
-      <button class="btn btn-danger me-1" data-bs-dismiss="modal" type="button">Delete Customer</button>
-
-      <button class="btn btn-success me-1" type="button">Update Customer</button>
-
+        <button class="btn btn-danger me-1" data-bs-target="#DeleteCustomerModal" data-bs-toggle="modal" type="button">
+          Delete Customer
+        </button>
+        <button class="btn btn-success me-1" data-bs-target="#UpdateCustomerModal" data-bs-toggle="modal" type="button">
+          Update Customer
+        </button>
       <button class="btn btn-warning me-1" type="button">Get All Customer Details</button>
     </div>
     </div>
   </section>
 </main>
+
+<!--Add Customer Modal -->
+<div aria-hidden="true" aria-labelledby="AddCustomerModalLabel" class="modal fade" id="AddCustomerModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="AddCustomerModalLabel">Customer Save</h5>
+        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+      </div>
+      <div class="modal-body">
+        <section>
+          <div class="mb-3">
+            <label class="form-label" for="AddCustomerFormFile">Customer ID</label>
+            <input class="form-control" id="AddCustomerFormFile" type="text">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="AddCustomerFormFileMultiple">Customer Name</label>
+            <input class="form-control" id="AddCustomerFormFileMultiple" multiple type="text">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="AddCustomerFormFileDisabled">Customer Address</label>
+            <input class="form-control" id="AddCustomerFormFileDisabled" type="text">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="AddCustomerFormFileSm">Customer Salary</label>
+            <input class="form-control form-control-sm" id="AddCustomerFormFileSm" type="number">
+          </div>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" type="button">Add Customer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Update Customer Modal -->
+<div aria-hidden="true" aria-labelledby="UpdateCustomerLabel" class="modal fade" id="UpdateCustomerModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="UpdateCustomerLabel">Customer Save</h5>
+        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+      </div>
+      <div class="modal-body">
+        <section>
+          <div class="mb-3">
+            <label class="form-label" for="UpdateCustomerFormFile">Customer ID</label>
+            <div class="d-flex">
+              <input class="form-control me-1" id="UpdateCustomerFormFile" type="text">
+              <button class="btn btn-outline-success"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="UpdateCustomerFormFileMultiple">Customer Name</label>
+            <input class="form-control" id="UpdateCustomerFormFileMultiple" multiple type="text">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="UpdateCustomerFormFileDisabled">Customer Address</label>
+            <input class="form-control" id="UpdateCustomerFormFileDisabled" type="text">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="UpdateCustomerFormFileSm">Customer Salary</label>
+            <input class="form-control form-control-sm" id="UpdateCustomerFormFileSm" type="number">
+          </div>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-warning" type="button">Update Customer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Delete Customer Modal -->
+<div aria-hidden="true" aria-labelledby="DeleteCustomerModalLabel" class="modal fade" id="DeleteCustomerModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="DeleteCustomerModalLabel">Customer Save</h5>
+        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+      </div>
+      <div class="modal-body">
+        <section>
+          <div class="mb-3">
+            <label class="form-label" for="DeleteCustomerFormFile">Customer ID</label>
+            <div class="d-flex">
+              <input class="form-control me-1" id="DeleteCustomerFormFile" type="text">
+              <button class="btn btn-outline-success"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="DeleteCustomerFormFileMultiple">Customer Name</label>
+            <input class="form-control" id="DeleteCustomerFormFileMultiple" multiple type="text">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="DeleteCustomerFormFileDisabled">Customer Address</label>
+            <input class="form-control" id="DeleteCustomerFormFileDisabled" type="text">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="DeleteCustomerFormFileSm">Customer Salary</label>
+            <input class="form-control form-control-sm" id="DeleteCustomerFormFileSm" type="number">
+          </div>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" type="button">Delete Customer</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
