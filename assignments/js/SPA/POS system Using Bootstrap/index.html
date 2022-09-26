@@ -91,7 +91,7 @@
         </section>
         <section class="table-style row mt-4 border rounded-3 p-2 ms-0 me-0">
             <div class="pb-2"><h3>Recent Sales</h3></div>
-            <div class="col mt-2 table-responsive">
+            <div class="col mt-2 table-responsive" style="height: 450px; overflow-y: scroll">
                 <table class="table table-bordered table-hover">
                     <thead>
                     <tr>
@@ -103,48 +103,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">INV-0123</th>
-                        <td>Sep 2022</td>
-                        <td>Jhon Smith</td>
-                        <td>$100</td>
-                        <td>Paid</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">INV-0123</th>
-                        <td>Sep 2022</td>
-                        <td>Jhon Smith</td>
-                        <td>$100</td>
-                        <td>Paid</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">INV-0123</th>
-                        <td>Sep 2022</td>
-                        <td>Jhon Smith</td>
-                        <td>$100</td>
-                        <td>Paid</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">INV-0123</th>
-                        <td>Sep 2022</td>
-                        <td>Jhon Smith</td>
-                        <td>$100</td>
-                        <td>Paid</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">INV-0123</th>
-                        <td>Sep 2022</td>
-                        <td>Jhon Smith</td>
-                        <td>$100</td>
-                        <td>Paid</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">INV-0123</th>
-                        <td>Sep 2022</td>
-                        <td>Jhon Smith</td>
-                        <td>$100</td>
-                        <td>Paid</td>
-                    </tr>
+
                     </tbody>
                 </table>
             </div>
@@ -177,8 +136,8 @@
             </div>
 
             <!--  Table-->
-            <div class="col-12">
-                <table class="table table-bordered table-hover col-12">
+            <div class="col-12" style="height: 340px; overflow-y: scroll">
+                <table class="table table-bordered table-hover col-12" id="customerTable">
                     <thead>
                     <tr>
                         <th scope="col">Customer ID</th>
@@ -188,24 +147,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry the Bird</td>
-                        <td>@twitter</td>
-                        <td>@mdo</td>
-                    </tr>
+
                     </tbody>
                 </table>
             </div>
@@ -220,7 +162,7 @@
                         type="button">
                     Update Customer
                 </button>
-                <button class="btn btn-warning me-1" type="button">Get All Customer Details</button>
+                <button class="btn btn-warning me-1" id="getAllCustomerDetails" type="button">Get All Customer Details</button>
             </div>
         </div>
     </section>
@@ -253,7 +195,7 @@
                 </section>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-success" type="button">Add Customer</button>
+                <button class="btn btn-success" id="addCustomerButton" type="button">Add Customer</button>
             </div>
         </div>
     </div>
@@ -359,8 +301,8 @@
             </div>
 
             <!--  Table-->
-            <div class="col-12">
-                <table class="table table-bordered table-hover">
+            <div class="col-12" style="height: 340px; overflow-y: scroll">
+                <table class="table table-bordered table-hover" id="itemTable">
                     <thead>
                     <tr>
                         <th scope="col">Item ID</th>
@@ -370,24 +312,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry the Bird</td>
-                        <td>@twitter</td>
-                        <td>@mdo</td>
-                    </tr>
+
                     </tbody>
                 </table>
             </div>
@@ -402,7 +327,7 @@
                         type="button">
                     Update Customer
                 </button>
-                <button class="btn btn-warning me-1" type="button">Get All Item Details</button>
+                <button class="btn btn-warning me-1" id="getAllItemDetails" type="button">Get All Item Details</button>
             </div>
         </div>
     </section>
@@ -435,7 +360,7 @@
                 </section>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-success" type="button">Add Item</button>
+                <button class="btn btn-success" id="addItemButton" type="button">Add Item</button>
             </div>
         </div>
     </div>
@@ -666,56 +591,15 @@
                 <table class="table table-bordered table-hover">
                     <thead>
                     <tr>
-                        <th scope="col">Item ID</th>
-                        <th scope="col">Item Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Qty</th>
-                        <th scope="col">Total</th>
+                        <th scope="col" id="colOrderItemID">Item ID</th>
+                        <th scope="col" id="colOrderItemName">Item Name</th>
+                        <th scope="col" id="colOrderItemPrice">Price</th>
+                        <th scope="col" id="colOrderQty">Qty</th>
+                        <th scope="col" id="colOrderTotal">Total</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>PR011</td>
-                        <td>Kirisamba</td>
-                        <td>190.0</td>
-                        <td>02</td>
-                        <td>380.0</td>
-                    </tr>
-                    <tr>
-                        <td>PR001</td>
-                        <td>Manchi Cookies</td>
-                        <td>150.0</td>
-                        <td>01</td>
-                        <td>150.0</td>
-                    </tr>
-                    <tr>
-                        <td>PR005</td>
-                        <td>Samaposha</td>
-                        <td>240.0</td>
-                        <td>01</td>
-                        <td>240.0</td>
-                    </tr>
-                    <tr>
-                        <td>PR021</td>
-                        <td>Milk</td>
-                        <td>1200.0</td>
-                        <td>02</td>
-                        <td>2400.0</td>
-                    </tr>
-                    <tr>
-                        <td>PR015</td>
-                        <td>Soap</td>
-                        <td>150.0</td>
-                        <td>04</td>
-                        <td>600.0</td>
-                    </tr>
-                    <tr>
-                        <td>PR006</td>
-                        <td>Shampoo</td>
-                        <td>65.0</td>
-                        <td>02</td>
-                        <td>130.0</td>
-                    </tr>
+
                     </tbody>
                 </table>
             </div>
@@ -784,6 +668,81 @@
         $("#customerNav").css('background', '#f8f9fa');
         $("#itemNav").css('background', '#f8f9fa');
         $("#orderNav").css('background', '#e6f2ff');
+    });
+
+// customer script
+
+    var customers=[];
+
+    $('#addCustomerButton').click(function (){
+
+        let customerID = $("#AddCustomerFormFile").val();
+        let customerName = $("#AddCustomerFormFileMultiple").val();
+        let customerAddress = $("#AddCustomerFormFileDisabled").val();
+        let customerSalary = $("#AddCustomerFormFileSm").val();
+
+
+        var customerObject = {
+            id: customerID,
+            name: customerName,
+            address: customerAddress,
+            salary: customerSalary
+        }
+
+        customers.push(customerObject);
+
+        for(var i of customers){
+            var row ="<tr><td>"+i.id+"</td><td>"+i.name+"</td><td>"+i.address+"</td><td>"+i.salary+"</td></tr>";
+        }
+
+        $('#customerTable').append(row);
+
+    });
+
+    $('#getAllCustomerDetails').click(function (){
+        $('#customerTable').empty();
+        for(var i of customers){
+            var row ="<tr><td>"+i.id+"</td><td>"+i.name+"</td><td>"+i.address+"</td><td>"+i.salary+"</td></tr>";
+        }
+
+        $('#customerTable').append(row);
+    });
+
+// item script
+
+    var items=[];
+
+    $('#addItemButton').click(function (){
+
+        let itemID = $("#AddItemFormFile").val();
+        let itemName = $("#AddItemFormFileMultiple").val();
+        let itemQty = $("#AddItemFormFileDisabled").val();
+        let itemPrice = $("#AddItemFormFileSm").val();
+
+
+        var itemObject = {
+            id: itemID,
+            name: itemName,
+            qty: itemQty,
+            price: itemPrice
+        }
+
+        items.push(itemObject);
+
+        for(var i of items){
+            var row ="<tr><td>"+i.id+"</td><td>"+i.name+"</td><td>"+i.qty+"</td><td>"+i.price+"</td></tr>";
+        }
+
+        $('#itemTable').append(row);
+
+    });
+
+    $('#getAllItemDetails').click(function (){
+        $('#itemTable').empty();
+        for(var i of items){
+            var row ="<tr><td>"+i.id+"</td><td>"+i.name+"</td><td>"+i.qty+"</td><td>"+i.price+"</td></tr>";
+        }
+        $('#itemTable').append(row);
     });
 
 </script>
