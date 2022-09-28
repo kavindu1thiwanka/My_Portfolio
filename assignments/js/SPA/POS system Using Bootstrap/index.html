@@ -24,7 +24,8 @@
                  width="30">
             POS System
         </a>
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
                 data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -162,7 +163,8 @@
                         type="button">
                     Update Customer
                 </button>
-                <button class="btn btn-warning me-1" id="getAllCustomerDetails" type="button">Get All Customer Details</button>
+                <button class="btn btn-warning me-1" id="getAllCustomerDetails" type="button">Get All Customer Details
+                </button>
             </div>
         </div>
     </section>
@@ -342,7 +344,7 @@
             <div class="modal-body">
                 <section>
                     <div class="mb-3">
-                        <label class="form-label" for="AddItemFormFile">Item ID</label>
+                        <label class="form-label" for="AddItemFormFile" >Item ID</label>
                         <input class="form-control" id="AddItemFormFile" type="text">
                     </div>
                     <div class="mb-3">
@@ -591,11 +593,11 @@
                 <table class="table table-bordered table-hover">
                     <thead>
                     <tr>
-                        <th scope="col" id="colOrderItemID">Item ID</th>
-                        <th scope="col" id="colOrderItemName">Item Name</th>
-                        <th scope="col" id="colOrderItemPrice">Price</th>
-                        <th scope="col" id="colOrderQty">Qty</th>
-                        <th scope="col" id="colOrderTotal">Total</th>
+                        <th id="colOrderItemID" scope="col">Item ID</th>
+                        <th id="colOrderItemName" scope="col">Item Name</th>
+                        <th id="colOrderItemPrice" scope="col">Price</th>
+                        <th id="colOrderQty" scope="col">Qty</th>
+                        <th id="colOrderTotal" scope="col">Total</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -670,17 +672,24 @@
         $("#orderNav").css('background', '#e6f2ff');
     });
 
-// customer script
+    // customer script
 
-    var customers=[];
+    var customers = [];
 
-    $('#addCustomerButton').click(function (){
+    function loadCustomerData(){
+        for (var i of customers) {
+            var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.address + "</td><td>" + i.salary + "</td></tr>";
+        }
+
+        $('#customerTable').append(row);
+    }
+
+    $('#addCustomerButton').click(function () {
 
         let customerID = $("#AddCustomerFormFile").val();
         let customerName = $("#AddCustomerFormFileMultiple").val();
         let customerAddress = $("#AddCustomerFormFileDisabled").val();
         let customerSalary = $("#AddCustomerFormFileSm").val();
-
 
         var customerObject = {
             id: customerID,
@@ -691,28 +700,28 @@
 
         customers.push(customerObject);
 
-        for(var i of customers){
-            var row ="<tr><td>"+i.id+"</td><td>"+i.name+"</td><td>"+i.address+"</td><td>"+i.salary+"</td></tr>";
-        }
-
-        $('#customerTable').append(row);
+        loadCustomerData();
 
     });
 
-    $('#getAllCustomerDetails').click(function (){
-        $('#customerTable').empty();
-        for(var i of customers){
-            var row ="<tr><td>"+i.id+"</td><td>"+i.name+"</td><td>"+i.address+"</td><td>"+i.salary+"</td></tr>";
-        }
-
-        $('#customerTable').append(row);
+    $('#getAllCustomerDetails').click(function () {
+        $('#customerTable').clear();
+        loadCustomerData();
     });
 
-// item script
+    // item script
 
-    var items=[];
+    var items = [];
 
-    $('#addItemButton').click(function (){
+    function loadItemData(){
+        for (var i of items) {
+            var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.qty + "</td><td>" + i.price + "</td></tr>";
+        }
+
+        $('#itemTable').append(row);
+    }
+
+    $('#addItemButton').click(function () {
 
         let itemID = $("#AddItemFormFile").val();
         let itemName = $("#AddItemFormFileMultiple").val();
@@ -729,20 +738,13 @@
 
         items.push(itemObject);
 
-        for(var i of items){
-            var row ="<tr><td>"+i.id+"</td><td>"+i.name+"</td><td>"+i.qty+"</td><td>"+i.price+"</td></tr>";
-        }
-
-        $('#itemTable').append(row);
+        loadItemData();
 
     });
 
-    $('#getAllItemDetails').click(function (){
-        $('#itemTable').empty();
-        for(var i of items){
-            var row ="<tr><td>"+i.id+"</td><td>"+i.name+"</td><td>"+i.qty+"</td><td>"+i.price+"</td></tr>";
-        }
-        $('#itemTable').append(row);
+    $('#getAllItemDetails').click(function () {
+        $('#itemTable').clear();
+        loadItemData();
     });
 
 </script>
