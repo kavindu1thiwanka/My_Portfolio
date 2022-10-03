@@ -253,7 +253,8 @@
                         <label class="form-label" for="DeleteCustomerFormFile">Customer ID</label>
                         <div class="d-flex">
                             <input class="form-control me-1" id="DeleteCustomerFormFile" type="text">
-                            <button class="btn btn-outline-success"><i class="fa-solid fa-magnifying-glass"></i>
+                            <button class="btn btn-outline-success" id="customerSearchBtn"><i
+                                    class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </div>
                     </div>
@@ -272,7 +273,7 @@
                 </section>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-danger" type="button">Delete Customer</button>
+                <button class="btn btn-danger" id="customerDeleteBtn" type="button">Delete Customer</button>
             </div>
         </div>
     </div>
@@ -344,7 +345,7 @@
             <div class="modal-body">
                 <section>
                     <div class="mb-3">
-                        <label class="form-label" for="AddItemFormFile" >Item ID</label>
+                        <label class="form-label" for="AddItemFormFile">Item ID</label>
                         <input class="form-control" id="AddItemFormFile" type="text">
                     </div>
                     <div class="mb-3">
@@ -676,7 +677,7 @@
 
     var customers = [];
 
-    function loadCustomerData(){
+    function loadCustomerData() {
         for (var i of customers) {
             var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.address + "</td><td>" + i.salary + "</td></tr>";
         }
@@ -709,11 +710,30 @@
         loadCustomerData();
     });
 
+    // $('#customerSearchBtn').click(function () {
+    //     var customer = $('#DeleteCustomerFormFile').text();
+    //     console.log(customer);
+    //
+    //     for (var i of customers) {
+    //         if (i.id == customer){
+    //             console.log(i.id);
+    //             $('#DeleteCustomerFormFile').text(i.id);
+    //             $('#DeleteCustomerFormFileMultiple').text(i.name);
+    //             $('#DeleteCustomerFormFileDisabled').text(i.address);
+    //             $('#DeleteCustomerFormFileSm').text(i.salary);
+    //             console.log("hari");
+    //         }else {
+    //             continue;
+    //             console.log("waradi");
+    //         }
+    //     }
+    // });
+
     // item script
 
     var items = [];
 
-    function loadItemData(){
+    function loadItemData() {
         for (var i of items) {
             var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.qty + "</td><td>" + i.price + "</td></tr>";
         }
