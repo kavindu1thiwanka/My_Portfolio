@@ -6,6 +6,7 @@
     <meta content="black" name="theme-color">
     <meta content="width=device-width initial-scale=1" name="viewport">
 
+    <link href="assets/css/normalize.css" rel="stylesheet">
     <link href="assets/css/fonts/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
@@ -23,7 +24,6 @@
         }
 
         body {
-            margin: 0;
             width: 100vw;
             position: relative;
         }
@@ -93,7 +93,41 @@
             margin-bottom: 90px;
             line-height: 1.6;
         }
+        main > section:nth-child(1) > div {
+            display: flex;
+        }
+        main > section:nth-child(1) > div > h1 {
+            font-size: 50px;
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
 
+        main > section:nth-child(1) > div > a > i {
+            color: white;
+            font-size: 50px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            margin-top: 25px;
+        }
+
+        /*main > section:nth-child(1) > div > h2 {*/
+        /*    position: absolute;*/
+        /*    right: 10px;*/
+        /*    top: 0;*/
+        /*}*/
+
+        /*main > section:nth-child(1) > div > h2 > a {*/
+        /*    text-decoration: none;*/
+        /*    font-size: 30px;*/
+        /*    color: white;*/
+        /*}*/
+
+        /*main > section:nth-child(1) > div > h2 > i {*/
+        /*    color: white;*/
+        /*}*/
 
         /*FOOTER*/
         footer {
@@ -138,18 +172,31 @@
 <main>
     <section>
         <div>
+            <a href="index.html"><i class="fa-solid fa-angle-left" ></i></a>
             <h1>PROJECT</h1>
-            <h2><i class="fa-solid fa-house"></i><a href="#"> Home</a></h2>
         </div>
         <hr>
     </section>
     <section>
+
+<!--        <div>-->
+<!--            <aside>-->
+<!--                <a href="#" target="_blank"><img alt="Logo" src="assets/portfolio/project example img.png"></a>-->
+<!--            </aside>-->
+<!--            <aside>-->
+<!--                <h1><a href="#" target="_blank">Car <span style="color: red">Animation</span></a></h1>-->
+<!--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur fuga ipsa iusto nam odio-->
+<!--                    optio quisquam repellat saepe voluptatem. Dignissimos facilis impedit laboriosam nobis qui quia-->
+<!--                    repellendus tenetur totam, velit?</p>-->
+<!--            </aside>-->
+<!--        </div>-->
+
         <div>
             <aside>
-                <a href="#" target="_blank"><img alt="Logo" src="assets/portfolio/project example img.png"></a>
+                <a href="assignments/js/Calculator/Calculator.html" target="_blank"><img alt="Logo" src="assets/portfolio/project example img.png"></a>
             </aside>
             <aside>
-                <h1><a href="#" target="_blank">Car <span style="color: red">Animation</span></a></h1>
+                <h1><a href="assignments/js/Calculator/Calculator.html" target="_blank">Calculator</a></h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur fuga ipsa iusto nam odio
                     optio quisquam repellat saepe voluptatem. Dignissimos facilis impedit laboriosam nobis qui quia
                     repellendus tenetur totam, velit?</p>
