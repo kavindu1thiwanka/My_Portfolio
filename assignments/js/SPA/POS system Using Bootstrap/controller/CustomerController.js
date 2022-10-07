@@ -1,3 +1,9 @@
+$("#AddCustomerFormFile,#AddCustomerFormFileMultiple,#AddCustomerFormFileDisabled,#AddCustomerFormFileSm,DeleteCustomerFormFile,DeleteCustomerFormFileMultiple,DeleteCustomerFormFileDisabled,DeleteCustomerFormFileSm").on('keydown', function (event) {
+    if (event.key == "Tab") {
+        event.preventDefault();
+    }
+});
+
 //Add Customer
 $('#addCustomerButton').click(function () {
 

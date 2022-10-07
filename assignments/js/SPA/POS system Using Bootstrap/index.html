@@ -280,15 +280,10 @@
 
             <!--  Button-->
             <div class="modal-footer col-12 mb-3">
-                <button class="btn btn-danger me-1" data-bs-target="#DeleteItemModal" data-bs-toggle="modal"
+                <button class="btn btn-warning me-1" data-bs-target="#ManageItemModal" data-bs-toggle="modal"
                         type="button">
-                    Delete Customer
+                    Manage Items
                 </button>
-                <button class="btn btn-success me-1" data-bs-target="#UpdateItemModal" data-bs-toggle="modal"
-                        type="button">
-                    Update Customer
-                </button>
-                <button class="btn btn-warning me-1" id="getAllItemDetails" type="button">Get All Item Details</button>
             </div>
         </div>
     </section>
@@ -326,48 +321,11 @@
         </div>
     </div>
 </div>
-<div aria-hidden="true" aria-labelledby="UpdateItemLabel" class="modal fade" id="UpdateItemModal" tabindex="-1">
+<div aria-hidden="true" aria-labelledby="ManageItemModalLabel" class="modal fade" id="ManageItemModal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="UpdateItemLabel">Delete Update</h5>
-                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
-            </div>
-            <div class="modal-body">
-                <section>
-                    <div class="mb-3">
-                        <label class="form-label" for="UpdateItemFormFile">Item ID</label>
-                        <div class="d-flex">
-                            <input class="form-control me-1" id="UpdateItemFormFile" type="text">
-                            <button class="btn btn-outline-success"><i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="UpdateItemFormFileMultiple">Item Name</label>
-                        <input class="form-control" id="UpdateItemFormFileMultiple" multiple type="text">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="UpdateItemFormFileDisabled">Item Price</label>
-                        <input class="form-control" id="UpdateItemFormFileDisabled" type="text">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="UpdateItemFormFileSm">Item Quantity</label>
-                        <input class="form-control form-control-sm" id="UpdateItemFormFileSm" type="number">
-                    </div>
-                </section>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-warning" type="button">Update Item</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div aria-hidden="true" aria-labelledby="DeleteItemModalLabel" class="modal fade" id="DeleteItemModal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="DeleteItemModalLabel">Item Delete</h5>
+                <h5 class="modal-title" id="ManageItemModalLabel">Item Manage</h5>
                 <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
             </div>
             <div class="modal-body">
@@ -376,7 +334,7 @@
                         <label class="form-label" for="DeleteItemFormFile">Item ID</label>
                         <div class="d-flex">
                             <input class="form-control me-1" id="DeleteItemFormFile" type="text">
-                            <button class="btn btn-outline-success"><i class="fa-solid fa-magnifying-glass"></i>
+                            <button class="btn btn-outline-success" id="itemSearchBtn"><i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </div>
                     </div>
@@ -395,7 +353,8 @@
                 </section>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-danger" type="button">Delete Item</button>
+                <button class="btn btn-danger" id="deleteItemBtn" type="button">Delete Item</button>
+                <button class="btn btn-warning" id="UpdateItemBtn" type="button">Update Item</button>
             </div>
         </div>
     </div>
