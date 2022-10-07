@@ -138,7 +138,7 @@
 
             <!--  Table-->
             <div class="col-12" style="height: 340px; overflow-y: scroll">
-                <table class="table table-bordered table-hover col-12" id="customerTable">
+                <table class="table table-bordered table-hover col-12" >
                     <thead>
                     <tr>
                         <th scope="col">Customer ID</th>
@@ -147,7 +147,7 @@
                         <th scope="col">Tel</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="customerTable">
 
                     </tbody>
                 </table>
@@ -155,15 +155,9 @@
 
             <!--  Button-->
             <div class="modal-footer col-12 mb-3">
-                <button class="btn btn-danger me-1" data-bs-target="#DeleteCustomerModal" data-bs-toggle="modal"
+                <button class="btn btn-warning me-1 mt-2" data-bs-target="#ManageCustomerModal" data-bs-toggle="modal"
                         type="button">
-                    Delete Customer
-                </button>
-                <button class="btn btn-success me-1" data-bs-target="#UpdateCustomerModal" data-bs-toggle="modal"
-                        type="button">
-                    Update Customer
-                </button>
-                <button class="btn btn-warning me-1" id="getAllCustomerDetails" type="button">Get All Customer Details
+                    Manage Customer
                 </button>
             </div>
         </div>
@@ -202,49 +196,12 @@
         </div>
     </div>
 </div>
-<div aria-hidden="true" aria-labelledby="UpdateCustomerLabel" class="modal fade" id="UpdateCustomerModal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="UpdateCustomerLabel">Customer Update</h5>
-                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
-            </div>
-            <div class="modal-body">
-                <section>
-                    <div class="mb-3">
-                        <label class="form-label" for="UpdateCustomerFormFile">Customer ID</label>
-                        <div class="d-flex">
-                            <input class="form-control me-1" id="UpdateCustomerFormFile" type="text">
-                            <button class="btn btn-outline-success"><i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="UpdateCustomerFormFileMultiple">Customer Name</label>
-                        <input class="form-control" id="UpdateCustomerFormFileMultiple" multiple type="text">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="UpdateCustomerFormFileDisabled">Customer Address</label>
-                        <input class="form-control" id="UpdateCustomerFormFileDisabled" type="text">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="UpdateCustomerFormFileSm">Customer Salary</label>
-                        <input class="form-control form-control-sm" id="UpdateCustomerFormFileSm" type="number">
-                    </div>
-                </section>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-warning" type="button">Update Customer</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div aria-hidden="true" aria-labelledby="DeleteCustomerModalLabel" class="modal fade" id="DeleteCustomerModal"
+<div aria-hidden="true" aria-labelledby="ManageCustomerModalLabel" class="modal fade" id="ManageCustomerModal"
      tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="DeleteCustomerModalLabel">Customer Delete</h5>
+                <h5 class="modal-title" id="ManageCustomerModalLabel">Customer Manage</h5>
                 <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
             </div>
             <div class="modal-body">
@@ -274,6 +231,7 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-danger" id="customerDeleteBtn" type="button">Delete Customer</button>
+                <button class="btn btn-warning" id="customerUpdateBtn" type="button">Update Customer</button>
             </div>
         </div>
     </div>
@@ -305,7 +263,7 @@
 
             <!--  Table-->
             <div class="col-12" style="height: 340px; overflow-y: scroll">
-                <table class="table table-bordered table-hover" id="itemTable">
+                <table class="table table-bordered table-hover" >
                     <thead>
                     <tr>
                         <th scope="col">Item ID</th>
@@ -314,7 +272,7 @@
                         <th scope="col">Price</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="itemTable">
 
                     </tbody>
                 </table>
