@@ -1,4 +1,4 @@
-$("#AddCustomerFormFile,#AddCustomerFormFileMultiple,#AddCustomerFormFileDisabled,#AddCustomerFormFileSm,DeleteCustomerFormFile,DeleteCustomerFormFileMultiple,DeleteCustomerFormFileDisabled,DeleteCustomerFormFileSm").on('keydown', function (event) {
+$("#AddCustomerFormFile,#AddCustomerFormFileMultiple,#AddCustomerFormFileDisabled,#AddCustomerFormFileSm,#DeleteCustomerFormFile,#DeleteCustomerFormFileMultiple,#DeleteCustomerFormFileDisabled,#DeleteCustomerFormFileSm").on('keydown', function (event) {
     if (event.key == "Tab") {
         event.preventDefault();
     }
@@ -39,7 +39,7 @@ function searchCustomer(cusID) {
     return null;
 }
 
-function setTextFieldValues(id, name, address, salary) {
+function setCustomerTextFieldValues(id, name, address, salary) {
     $("#DeleteCustomerFormFile").val(id);
     $("#DeleteCustomerFormFileMultiple").val(name);
     $("#DeleteCustomerFormFileDisabled").val(address);
@@ -50,10 +50,10 @@ $('#customerSearchBtn').click(function (){
     let typedId = $("#DeleteCustomerFormFile").val();
     let customer = searchCustomer(typedId);
     if (customer != null) {
-        setTextFieldValues(customer.id, customer.name, customer.address, customer.salary);
+        setCustomerTextFieldValues(customer.id, customer.name, customer.address, customer.salary);
     } else {
         alert("There is no customer available for that " + typedId);
-        setTextFieldValues("", "", "", "");
+        setCustomerTextFieldValues("", "", "", "");
     }
 });
 
@@ -68,7 +68,7 @@ $('#customerDeleteBtn').click(function (){
             customers.splice(indexNumber, 1);
             loadCustomerData();
             alert("Customer Successfully Deleted..");
-            setTextFieldValues("", "", "", "");
+            setCustomerTextFieldValues("", "", "", "");
         }
     } else {
         alert("No such customer to delete. please check the id");
@@ -86,7 +86,7 @@ $('#customerUpdateBtn').click(function (){
         customer.salary = $("#DeleteCustomerFormFileSm").val();
         loadCustomerData();
         alert("Customer Updated Successfully");
-        setTextFieldValues("", "", "", "");
+        setCustomerTextFieldValues("", "", "", "");
     } else {
         alert("Customer Updated Failed..!");
     }
@@ -99,3 +99,73 @@ function loadCustomerData() {
         $('#customerTable').append(row);
     }
 }
+
+//Validation
+
+const cusIDRegEx = /^(C-)[0-9]{3}$/;
+const cusNameRegEx = /^[A-z ]{5,20}$/;
+const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
+const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+
+let customerValidations = [];
+customerValidations.push({reg: cusIDRegEx, field: $('#AddCustomerFormFile'),error:'Customer ID Pattern is Wrong : C-001',cato: "add"});
+customerValidations.push({reg: cusNameRegEx, field: $('#AddCustomerFormFileMultiple'),error:'Customer Name Pattern is Wrong : A-z 5-20',cato: "add"});
+customerValidations.push({reg: cusAddressRegEx, field: $('#AddCustomerFormFileDisabled'),error:'Customer Address Pattern is Wrong : A-z 0-9 ,/',cato: "add"});
+customerValidations.push({reg: cusSalaryRegEx, field: $('#AddCustomerFormFileSm'),error:'Customer Salary Pattern is Wrong : 100 or 100.00',cato: "add"});
+customerValidations.push({reg: cusIDRegEx, field: $('#DeleteCustomerFormFile'),error:'Customer ID Pattern is Wrong : C-001',cato: "manage"});
+customerValidations.push({reg: cusNameRegEx, field: $('#DeleteCustomerFormFileMultiple'),error:'Customer Name Pattern is Wrong : A-z 5-20',cato: "manage"});
+customerValidations.push({reg: cusAddressRegEx, field: $('#DeleteCustomerFormFileDisabled'),error:'Customer Address Pattern is Wrong : A-z 0-9 ,/',cato: "manage"});
+customerValidations.push({reg: cusSalaryRegEx, field: $('#DeleteCustomerFormFileSm'),error:'Customer Salary Pattern is Wrong : 100 or 100.00',cato: "manage"});
+
+function checkCustomerValidity() {
+    for (let validation of customerValidations) {
+        if (checkCustomerInput(validation.reg,validation.field)) {
+            if (validation.field.val().length <= 0) {
+                defaultText(validation.field,"");
+            } else {
+                validation.field.css('border', '2px solid green');
+                validation.field.parent().children('span').text("");
+                btnState(validation.cato,"success");
+            }
+        } else {
+            if (validation.field.val().length <= 0) {
+                defaultText(validation.field,"");
+            } else {
+                validation.field.css('border', '2px solid red');
+                validation.field.parent().children('span').text(validation.error);
+                btnState(validation.cato,"fail");
+            }
+        }
+    }
+}
+
+function defaultText(txtField,error) {
+    txtField.css("border", "1px solid #ced4da");
+    txtField.parent().children('span').text(error);
+}
+function checkCustomerInput(regex, txtField) {
+    let inputVal = txtField.val();
+    return regex.test(inputVal) ? true : false;
+}
+
+function btnState(txtType,stat){
+    if (txtType == "add"){
+        if (stat == "success"){
+            $('#addCustomerButton').attr('disabled',false);
+        }else if(stat == "fail"){
+            $('#addCustomerButton').attr('disabled',true);
+        }
+    }else if (txtType == "manage"){
+        if (stat == "success"){
+            $('#customerDeleteBtn').attr('disabled',false);
+            $('#customerUpdateBtn').attr('disabled',false);
+        }else if(stat == "fail"){
+            $('#customerDeleteBtn').attr('disabled',true);
+            $('#customerUpdateBtn').attr('disabled',true);
+        }
+    }
+}
+
+$("#AddCustomerFormFile,#AddCustomerFormFileMultiple,#AddCustomerFormFileDisabled,#AddCustomerFormFileSm,#DeleteCustomerFormFile,#DeleteCustomerFormFileMultiple,#DeleteCustomerFormFileDisabled,#DeleteCustomerFormFileSm").on('keyup', function (event) {
+    checkCustomerValidity();
+});

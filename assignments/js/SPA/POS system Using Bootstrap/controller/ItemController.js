@@ -1,4 +1,4 @@
-$("#AddItemFormFile,#AddItemFormFileMultiple,#AddItemFormFileDisabled,#AddItemFormFileSm,DeleteItemFormFileSm,DeleteItemFormFileDisabled,DeleteItemFormFileMultiple,DeleteItemFormFile").on('keydown', function (event) {
+$("#AddItemFormFile,#AddItemFormFileMultiple,#AddItemFormFileDisabled,#AddItemFormFileSm,#DeleteItemFormFileSm,#DeleteItemFormFileDisabled,#DeleteItemFormFileMultiple,#DeleteItemFormFile").on('keydown', function (event) {
     if (event.key == "Tab") {
         event.preventDefault();
     }

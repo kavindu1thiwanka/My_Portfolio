@@ -7,6 +7,7 @@
     <link href="assets/css/Style.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/Fontawesome/all.min.css" rel="stylesheet">
+    <link href="assets/css/normalize.css" rel="stylesheet">
 
     <style>
         body {
@@ -138,7 +139,7 @@
 
             <!--  Table-->
             <div class="col-12" style="height: 340px; overflow-y: scroll">
-                <table class="table table-bordered table-hover col-12" >
+                <table class="table table-bordered table-hover col-12">
                     <thead>
                     <tr>
                         <th scope="col">Customer ID</th>
@@ -175,18 +176,22 @@
                     <div class="mb-3">
                         <label class="form-label" for="AddCustomerFormFile">Customer ID</label>
                         <input class="form-control" id="AddCustomerFormFile" type="text">
+                        <span class="control-error"></span>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="AddCustomerFormFileMultiple">Customer Name</label>
                         <input class="form-control" id="AddCustomerFormFileMultiple" multiple type="text">
+                        <span class="control-error"></span>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="AddCustomerFormFileDisabled">Customer Address</label>
                         <input class="form-control" id="AddCustomerFormFileDisabled" type="text">
+                        <span class="control-error"></span>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="AddCustomerFormFileSm">Customer Salary</label>
-                        <input class="form-control form-control-sm" id="AddCustomerFormFileSm" type="number">
+                        <input class="form-control form-control-sm" id="AddCustomerFormFileSm" type="text">
+                        <span class="control-error"></span>
                     </div>
                 </section>
             </div>
@@ -214,18 +219,22 @@
                                     class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </div>
+                        <span class="control-error"></span>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="DeleteCustomerFormFileMultiple">Customer Name</label>
                         <input class="form-control" id="DeleteCustomerFormFileMultiple" multiple type="text">
+                        <span class="control-error"></span>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="DeleteCustomerFormFileDisabled">Customer Address</label>
                         <input class="form-control" id="DeleteCustomerFormFileDisabled" type="text">
+                        <span class="control-error"></span>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="DeleteCustomerFormFileSm">Customer Salary</label>
-                        <input class="form-control form-control-sm" id="DeleteCustomerFormFileSm" type="number">
+                        <input class="form-control form-control-sm" id="DeleteCustomerFormFileSm" type="text">
+                        <span class="control-error"></span>
                     </div>
                 </section>
             </div>
@@ -263,7 +272,7 @@
 
             <!--  Table-->
             <div class="col-12" style="height: 340px; overflow-y: scroll">
-                <table class="table table-bordered table-hover" >
+                <table class="table table-bordered table-hover">
                     <thead>
                     <tr>
                         <th scope="col">Item ID</th>
@@ -334,7 +343,8 @@
                         <label class="form-label" for="DeleteItemFormFile">Item ID</label>
                         <div class="d-flex">
                             <input class="form-control me-1" id="DeleteItemFormFile" type="text">
-                            <button class="btn btn-outline-success" id="itemSearchBtn"><i class="fa-solid fa-magnifying-glass"></i>
+                            <button class="btn btn-outline-success" id="itemSearchBtn"><i
+                                    class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </div>
                     </div>
@@ -518,7 +528,7 @@
                         <th id="colOrderTotal" scope="col">Total</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="orderTbl">
 
                     </tbody>
                 </table>

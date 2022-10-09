@@ -38,3 +38,8 @@
 .table-style{
     background: #ffffff;
 }
+
+.control-error {
+    color: red;
+    font-size: 13px;
+}
