@@ -27,6 +27,8 @@ $('#addCustomerButton').click(function () {
     $("#AddCustomerFormFileSm").val("");
 
     loadCustomerData();
+
+    defaultAllTextCustomer();
 });
 
 //Search Customer
@@ -73,6 +75,7 @@ $('#customerDeleteBtn').click(function (){
     } else {
         alert("No such customer to delete. please check the id");
     }
+    defaultAllTextCustomer();
 });
 
 //Update Customer
@@ -90,6 +93,7 @@ $('#customerUpdateBtn').click(function (){
     } else {
         alert("Customer Updated Failed..!");
     }
+    defaultAllTextCustomer();
 });
 
 function loadCustomerData() {
@@ -121,7 +125,7 @@ function checkCustomerValidity() {
     for (let validation of customerValidations) {
         if (checkCustomerInput(validation.reg,validation.field)) {
             if (validation.field.val().length <= 0) {
-                defaultText(validation.field,"");
+                defaultTextCustomer(validation.field,"");
             } else {
                 validation.field.css('border', '2px solid green');
                 validation.field.parent().children('span').text("");
@@ -129,7 +133,7 @@ function checkCustomerValidity() {
             }
         } else {
             if (validation.field.val().length <= 0) {
-                defaultText(validation.field,"");
+                defaultTextCustomer(validation.field,"");
             } else {
                 validation.field.css('border', '2px solid red');
                 validation.field.parent().children('span').text(validation.error);
@@ -139,7 +143,15 @@ function checkCustomerValidity() {
     }
 }
 
-function defaultText(txtField,error) {
+function defaultAllTextCustomer() {
+    for (let validation of customerValidations) {
+        validation.field.css("border", "1px solid #ced4da");
+        validation.field.parent().children('span').text("");
+    }
+
+}
+
+function defaultTextCustomer(txtField,error) {
     txtField.css("border", "1px solid #ced4da");
     txtField.parent().children('span').text(error);
 }
