@@ -277,8 +277,8 @@
                     <tr>
                         <th scope="col">Item Code</th>
                         <th scope="col">Item Name</th>
-                        <th scope="col">Qty</th>
                         <th scope="col">Price</th>
+                        <th scope="col">Qty</th>
                     </tr>
                     </thead>
                     <tbody id="itemTable">
@@ -448,10 +448,10 @@
                     </div>
                     <div class="col-12 pb-3">
                         <label class="form-label" for="orderQty">Order Quantity</label>
-                        <input class="form-control" id="orderQty" placeholder="Qty" type="text">
+                        <input class="form-control" id="orderQty" placeholder="Qty" type="number">
                     </div>
                     <div class="modal-footer col-12 pb-2">
-                        <button class="btn btn-danger" type="button">Add Item</button>
+                        <button class="btn btn-danger" id="addItemOnOrder" type="button" disabled>Add Item</button>
                     </div>
                 </div>
             </div>
@@ -519,7 +519,7 @@
                 <table class="table table-bordered table-hover">
                     <thead>
                     <tr>
-                        <th id="colOrderItemID" scope="col">Item ID</th>
+                        <th id="colOrderItemID" scope="col">Item Code</th>
                         <th id="colOrderItemName" scope="col">Item Name</th>
                         <th id="colOrderItemPrice" scope="col">Price</th>
                         <th id="colOrderQty" scope="col">Qty</th>

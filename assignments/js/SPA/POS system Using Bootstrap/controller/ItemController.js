@@ -9,8 +9,8 @@ $('#addItemButton').click(function () {
 
     let itemID = $("#AddItemFormFile").val();
     let itemName = $("#AddItemFormFileMultiple").val();
-    let itemQty = $("#AddItemFormFileDisabled").val();
-    let itemPrice = $("#AddItemFormFileSm").val();
+    let itemQty = $("#AddItemFormFileSm").val();
+    let itemPrice = $("#AddItemFormFileDisabled").val();
 
 
     var itemObject = {
@@ -28,6 +28,8 @@ $('#addItemButton').click(function () {
     $("#AddItemFormFileSm").val("");
 
     loadItemData();
+
+    loadItemsForOrder();
 
     defaultAllTextItem();
 });
@@ -86,8 +88,8 @@ $('#UpdateItemBtn').click(function () {
     if (item != null) {
         item.id = $("#DeleteItemFormFile").val();
         item.name = $("#DeleteItemFormFileMultiple").val();
-        item.qty = $("#DeleteItemFormFileDisabled").val();
-        item.price = $("#DeleteItemFormFileSm").val();
+        item.qty = $("#DeleteItemFormFileSm").val();
+        item.price = $("#DeleteItemFormFileDisabled").val();
         loadItemData();
         alert("Item Updated Successfully");
         setItemTextFieldValues("", "", "", "");
@@ -100,7 +102,7 @@ $('#UpdateItemBtn').click(function () {
 function loadItemData() {
     $('#itemTable').empty();
     for (var i of items) {
-        var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.qty + "</td><td>" + i.price + "</td></tr>";
+        var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.price + "</td><td>" + i.qty + "</td></tr>";
         $('#itemTable').append(row);
     }
 }
