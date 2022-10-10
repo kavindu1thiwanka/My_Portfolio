@@ -41,9 +41,9 @@ $('#lblItemCode').click(function () {
 });
 
 $("#orderQty").on('keyup', function (event) {
-    if ($("#orderQty").val() == null | $("#orderQty").val() == 0 ){
+    if ($("#orderQty").val() == null | $("#orderQty").val() == 0) {
         $('#addItemOnOrder').attr('disabled', true);
-    }else {
+    } else {
         $('#addItemOnOrder').attr('disabled', false);
     }
 });
@@ -54,9 +54,9 @@ $('#addItemOnOrder').click(function () {
     let itemName = $("#lblItem").val();
     let itemPrice = $("#lblPrice").val();
     let itemsQty = $("#orderQty").val();
-    let itemsTotal = $("#orderQty").val()*$("#lblPrice").val();
+    let itemsTotal = $("#orderQty").val() * $("#lblPrice").val();
 
-    if (orderItems.length == 0){
+    if (orderItems.length == 0) {
         var orderItemObject = {
             itemCode: itemID,
             itemName: itemName,
@@ -65,21 +65,21 @@ $('#addItemOnOrder').click(function () {
             tot: itemsTotal
         }
         orderItems.push(orderItemObject);
-    }else {
+    } else {
         let targetItem;
-        for (var o of orderItems){
-            if (o.itemCode == itemID){
-                targetItem=o.itemCode;
+        for (var o of orderItems) {
+            if (o.itemCode == itemID) {
+                targetItem = o.itemCode;
                 break;
-            }else {
-                continue;
+            } else {
+
             }
         }
-        if (targetItem != null){
-            let qtyNewVal =  $("#orderQty").val();
+        if (targetItem != null) {
+            let qtyNewVal = $("#orderQty").val();
             o.itemQty = Number(o.itemQty) + Number(qtyNewVal);
-            o.tot = o.itemQty*o.price;
-        }else {
+            o.tot = o.itemQty * o.price;
+        } else {
             orderItemObject = {
                 itemCode: itemID,
                 itemName: itemName,
@@ -93,20 +93,20 @@ $('#addItemOnOrder').click(function () {
 
     loadOrdersData();
 
-    let qtyVal=$("#orderQty").val();
+    let qtyVal = $("#orderQty").val();
     let itemCode = $("#lblItemCode").val();
     for (let item of items) {
         if (item.id == itemCode) {
-            item.qty = item.qty-qtyVal;
+            item.qty = item.qty - qtyVal;
             $("#qtyOnH").val(item.qty);
         }
     }
 
     loadItemData();
 
-    let sumTotal=0;
-    for (var o of orderItems){
-        sumTotal=sumTotal+Number(o.tot);
+    let sumTotal = 0;
+    for (var o of orderItems) {
+        sumTotal = sumTotal + Number(o.tot);
     }
     $("#total").text(sumTotal);
 });
@@ -118,3 +118,22 @@ function loadOrdersData() {
         $('#orderTbl').append(row);
     }
 }
+
+function generateOrderID() {
+    if (orders.length == 0){
+        $('#orderId').val("OD-001");
+    }else {
+        let ordersCount = orders.length;
+        if (ordersCount > 10){
+            $('#orderId').val("OD-00"+ordersCount);
+        }else if (ordersCount > 100){
+            $('#orderId').val("OD-0"+ordersCount);
+        }else if (ordersCount > 100000){
+            $('#orderId').val("OD-"+ordersCount);
+        }
+    }
+}
+
+$('#orderNav,#btnSubmitOrder').click(function (){
+    generateOrderID();
+});
