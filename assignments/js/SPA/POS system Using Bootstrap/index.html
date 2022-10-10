@@ -99,9 +99,9 @@
                     <tr>
                         <th scope="col">Invoice</th>
                         <th scope="col">Date</th>
-                        <th scope="col">Customer</th>
-                        <th scope="col">Amount</th>
-                        <th scope="col">Status</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Item Amount</th>
+                        <th scope="col">Payment Total</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -401,7 +401,7 @@
                     <div class="col-12 pb-1">
                         <label class="form-label" for="lblCustomerId">Customer ID</label>
                         <select aria-label="Default select example" class="form-control" id="lblCustomerId" placeholder="ID">
-                            <option selected>Select Customer ID</option>
+<!--                            <option selected>Select Customer ID</option>-->
                         </select>
                     </div>
                     <div class="col-6 pb-1">
@@ -473,7 +473,24 @@
                             </div>
 
                         </div>
+                        <div class="col-6 mt-2">
+                            <div class="form-group">
+                                <label>Cash</label>
+                                <input class="form-control" id="txtCash" type="text">
+                                <span class="control-error"
+                                      id="cash-empty-error"></span>
+                            </div>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <div class="form-group">
+                                <label>Discount</label>
+                                <input class="form-control" id="txtDiscount" type="text">
+                            </div>
+                        </div>
                         <div class="col-12">
+                            <hr>
+                        </div>
+                        <div class="col-7">
                             <div class="row">
                                 <div class="col-12">
                                     <span id="total-text1">SubTotal : </span>
@@ -482,30 +499,9 @@
                                     <span id="subtotal">00.0</span> Rs/=
                                 </div>
                             </div>
-
                         </div>
-                        <div class="col-6 mt-2">
-                            <div class="form-group">
-                                <label>Cash</label>
-                                <input class="form-control" id="txtCash" min="0" type="number">
-                                <span class="control-error"
-                                      id="cash-empty-error"></span>
-                            </div>
-                        </div>
-                        <div class="col-6 mt-2">
-                            <div class="form-group">
-                                <label>Discount</label>
-                                <input class="form-control" id="txtDiscount" min="0" type="number">
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <div class="form-group">
-                                <label>Balance</label>
-                                <input class="form-control" id="txtBalance" type="text">
-                            </div>
-                        </div>
-                        <div class="col-4 mt-4 ps-0">
-                            <button class="btn btn-success" id="btnSubmitOrder" type="button">Purchase</button>
+                        <div class="col-5 mt-4 ps-0">
+                            <button class="btn btn-success" id="btnSubmitOrder" type="button" disabled>Purchase</button>
                         </div>
                     </div>
                 </section>

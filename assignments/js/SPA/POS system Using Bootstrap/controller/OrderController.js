@@ -120,20 +120,77 @@ function loadOrdersData() {
 }
 
 function generateOrderID() {
-    if (orders.length == 0){
+    if (orders.length === 0){
         $('#orderId').val("OD-001");
     }else {
-        let ordersCount = orders.length;
-        if (ordersCount > 10){
-            $('#orderId').val("OD-00"+ordersCount);
-        }else if (ordersCount > 100){
-            $('#orderId').val("OD-0"+ordersCount);
-        }else if (ordersCount > 100000){
-            $('#orderId').val("OD-"+ordersCount);
+        let ordersCount = orders.length + 1;
+        if (ordersCount < 10){
+            $('#orderId').val("OD-00"+ ordersCount);
+        }else if (ordersCount < 100){
+            $('#orderId').val("OD-0"+ ordersCount);
+        }else if (ordersCount < 100000){
+            $('#orderId').val("OD-"+ ordersCount);
         }
     }
 }
 
-$('#orderNav,#btnSubmitOrder').click(function (){
+$('#orderNav').click(function (){
     generateOrderID();
 });
+
+let finalTotal;
+
+$("#txtDiscount").on('keyup', function (event) {
+    finalTotal = 0;
+    let dis= $("#txtDiscount").val();
+    let Total = $("#total").text();
+    finalTotal = Total - (Number(Total) * Number(dis) / 100);
+    $("#subtotal").text(finalTotal);
+
+    if ($("#lblCustomer").val() !== "Name" && $("#txtCash").val() != null && $("#txtDiscount").val() != null){
+        $('#btnSubmitOrder').attr('disabled', false);
+    }else {
+        $('#btnSubmitOrder').attr('disabled', true);
+    }
+});
+
+$('#btnSubmitOrder').click(function (){
+
+    let invoID = $("#orderId").val();
+    let orDate = $("#lblDate").val();
+    let cusName = $("#lblCustomer").val();
+    let itemsAmo = orderItems.length;
+    let totalPrice = finalTotal;
+
+
+    var orderObject = {
+        invoiceID: invoID,
+        orderDate: orDate,
+        custName: cusName,
+        itemAmount: itemsAmo,
+        totPrice: totalPrice
+    }
+    orders.push(orderObject);
+
+    generateOrderID();
+    clearAllTextField();
+});
+
+function clearAllTextField() {
+    $('#orderTbl').empty();
+    $("#total").text("00.0");
+    $("#subtotal").text("00.0");
+    $("#orderQty").val("");
+    $("#txtCash").val("");
+    $("#txtDiscount").val("");
+
+    $("#lblCustomer").val("Name");
+    $("#lblTel").val("0771236549");
+    $("#lblAddress").val("Galle");
+    $("#lblItem").val("Name");
+    $("#lblPrice").val("100.0");
+    $("#qtyOnH").val("100");
+
+    $('#btnSubmitOrder').attr('disabled', true);
+    $('#addItemOnOrder').attr('disabled', true);
+}
