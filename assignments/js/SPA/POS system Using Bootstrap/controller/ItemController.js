@@ -49,7 +49,7 @@ function setItemTextFieldValues(id, name, qty, price) {
     $("#DeleteItemFormFileSm").val(price);
 }
 
-$('#itemSearchBtn').click(function (){
+$('#itemSearchBtn').click(function () {
     let typedId = $("#DeleteItemFormFile").val();
     let item = searchItems(typedId);
     if (item != null) {
@@ -61,12 +61,12 @@ $('#itemSearchBtn').click(function (){
 });
 
 //Delete Items
-$('#deleteItemBtn').click(function (){
+$('#deleteItemBtn').click(function () {
     let ItemID = $("#DeleteItemFormFile").val();
     let item = searchItems(ItemID);
     if (item != null) {
         let option = confirm("Do you really want to delete Item id :" + ItemID);
-        if (option){
+        if (option) {
             let indexNumber = items.indexOf(item);
             items.splice(indexNumber, 1);
             loadItemData();
@@ -80,7 +80,7 @@ $('#deleteItemBtn').click(function (){
 });
 
 //Update Items
-$('#UpdateItemBtn').click(function (){
+$('#UpdateItemBtn').click(function () {
     let ItemID = $("#DeleteItemFormFile").val();
     let item = searchItems(ItemID);
     if (item != null) {
@@ -108,37 +108,77 @@ function loadItemData() {
 //Validation
 
 const itemIDRegEx = /^(I-)[0-9]{3}$/;
-const itemNameRegEx = /^[A-z ]{5,20}$/;
+const itemNameRegEx = /^[A-z ]{2,20}$/;
 const itemQrtRegEx = /^[0-9]{1,}$/;
 const itemPriceRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
 let itemValidations = [];
-itemValidations.push({reg: itemIDRegEx, field: $('#AddItemFormFile'),error:'Item ID Pattern is Wrong : I-001',cato: "add"});
-itemValidations.push({reg: itemNameRegEx, field: $('#AddItemFormFileMultiple'),error:'Item Name Pattern is Wrong : A-z 5-20',cato: "add"});
-itemValidations.push({reg: itemQrtRegEx, field: $('#AddItemFormFileSm'),error:'Item Quantity Pattern is Wrong : 0-9',cato: "add"});
-itemValidations.push({reg: itemPriceRegEx, field: $('#AddItemFormFileDisabled'),error:'Item Price Pattern is Wrong : 100 or 100.00',cato: "add"});
-itemValidations.push({reg: itemIDRegEx, field: $('#DeleteItemFormFile'),error:'Item ID Pattern is Wrong : C-001',cato: "manage"});
-itemValidations.push({reg: itemNameRegEx, field: $('#DeleteItemFormFileMultiple'),error:'Item Name Pattern is Wrong : A-z 5-20',cato: "manage"});
-itemValidations.push({reg: itemQrtRegEx, field: $('#DeleteItemFormFileSm'),error:'Item Quantity Pattern is Wrong :  0-9',cato: "manage"});
-itemValidations.push({reg: itemPriceRegEx, field: $('#DeleteItemFormFileDisabled'),error:'Item Price Pattern is Wrong : 100 or 100.00',cato: "manage"});
+itemValidations.push({
+    reg: itemIDRegEx,
+    field: $('#AddItemFormFile'),
+    error: 'Item ID Pattern is Wrong : I-001',
+    cato: "add"
+});
+itemValidations.push({
+    reg: itemNameRegEx,
+    field: $('#AddItemFormFileMultiple'),
+    error: 'Item Name Pattern is Wrong : A-z 5-20',
+    cato: "add"
+});
+itemValidations.push({
+    reg: itemQrtRegEx,
+    field: $('#AddItemFormFileSm'),
+    error: 'Item Quantity Pattern is Wrong : 0-9',
+    cato: "add"
+});
+itemValidations.push({
+    reg: itemPriceRegEx,
+    field: $('#AddItemFormFileDisabled'),
+    error: 'Item Price Pattern is Wrong : 100 or 100.00',
+    cato: "add"
+});
+itemValidations.push({
+    reg: itemIDRegEx,
+    field: $('#DeleteItemFormFile'),
+    error: 'Item ID Pattern is Wrong : C-001',
+    cato: "manage"
+});
+itemValidations.push({
+    reg: itemNameRegEx,
+    field: $('#DeleteItemFormFileMultiple'),
+    error: 'Item Name Pattern is Wrong : A-z 5-20',
+    cato: "manage"
+});
+itemValidations.push({
+    reg: itemQrtRegEx,
+    field: $('#DeleteItemFormFileSm'),
+    error: 'Item Quantity Pattern is Wrong :  0-9',
+    cato: "manage"
+});
+itemValidations.push({
+    reg: itemPriceRegEx,
+    field: $('#DeleteItemFormFileDisabled'),
+    error: 'Item Price Pattern is Wrong : 100 or 100.00',
+    cato: "manage"
+});
 
 function checkItemValidity() {
     for (let validation of itemValidations) {
-        if (checkItemInput(validation.reg,validation.field)) {
+        if (checkItemInput(validation.reg, validation.field)) {
             if (validation.field.val().length <= 0) {
-                defaultTextItem(validation.field,"");
+                defaultTextItem(validation.field, "");
             } else {
                 validation.field.css('border', '2px solid green');
                 validation.field.parent().children('span').text("");
-                btnStateItem(validation.cato,"success");
+                btnStateItem(validation.cato, "success");
             }
         } else {
             if (validation.field.val().length <= 0) {
-                defaultTextItem(validation.field,"");
+                defaultTextItem(validation.field, "");
             } else {
                 validation.field.css('border', '2px solid red');
                 validation.field.parent().children('span').text(validation.error);
-                btnStateItem(validation.cato,"fail");
+                btnStateItem(validation.cato, "fail");
             }
         }
     }
@@ -152,29 +192,30 @@ function defaultAllTextItem() {
 
 }
 
-function defaultTextItem(txtField,error) {
+function defaultTextItem(txtField, error) {
     txtField.css("border", "1px solid #ced4da");
     txtField.parent().children('span').text(error);
 }
+
 function checkItemInput(regex, txtField) {
     let inputVal = txtField.val();
     return regex.test(inputVal) ? true : false;
 }
 
-function btnStateItem(txtType,stat){
-    if (txtType == "add"){
-        if (stat == "success"){
-            $('#addItemButton').attr('disabled',false);
-        }else if(stat == "fail"){
-            $('#addItemButton').attr('disabled',true);
+function btnStateItem(txtType, stat) {
+    if (txtType == "add") {
+        if (stat == "success") {
+            $('#addItemButton').attr('disabled', false);
+        } else if (stat == "fail") {
+            $('#addItemButton').attr('disabled', true);
         }
-    }else if (txtType == "manage"){
-        if (stat == "success"){
-            $('#deleteItemBtn').attr('disabled',false);
-            $('#UpdateItemBtn').attr('disabled',false);
-        }else if(stat == "fail"){
-            $('#deleteItemBtn').attr('disabled',true);
-            $('#UpdateItemBtn').attr('disabled',true);
+    } else if (txtType == "manage") {
+        if (stat == "success") {
+            $('#deleteItemBtn').attr('disabled', false);
+            $('#UpdateItemBtn').attr('disabled', false);
+        } else if (stat == "fail") {
+            $('#deleteItemBtn').attr('disabled', true);
+            $('#UpdateItemBtn').attr('disabled', true);
         }
     }
 }

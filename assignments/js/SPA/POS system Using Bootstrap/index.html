@@ -189,7 +189,7 @@
                         <span class="control-error"></span>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="AddCustomerFormFileSm">Customer Salary</label>
+                        <label class="form-label" for="AddCustomerFormFileSm">Customer Phone Numbe</label>
                         <input class="form-control form-control-sm" id="AddCustomerFormFileSm" type="text">
                         <span class="control-error"></span>
                     </div>
@@ -232,7 +232,7 @@
                         <span class="control-error"></span>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="DeleteCustomerFormFileSm">Customer Salary</label>
+                        <label class="form-label" for="DeleteCustomerFormFileSm">Customer Phone Number</label>
                         <input class="form-control form-control-sm" id="DeleteCustomerFormFileSm" type="text">
                         <span class="control-error"></span>
                     </div>
@@ -275,7 +275,7 @@
                 <table class="table table-bordered table-hover">
                     <thead>
                     <tr>
-                        <th scope="col">Item ID</th>
+                        <th scope="col">Item Code</th>
                         <th scope="col">Item Name</th>
                         <th scope="col">Qty</th>
                         <th scope="col">Price</th>
@@ -307,7 +307,7 @@
             <div class="modal-body">
                 <section>
                     <div class="mb-3">
-                        <label class="form-label" for="AddItemFormFile">Item ID</label>
+                        <label class="form-label" for="AddItemFormFile">Item Code</label>
                         <input class="form-control" id="AddItemFormFile" type="text">
                         <span class="control-error"></span>
                     </div>
@@ -344,7 +344,7 @@
             <div class="modal-body">
                 <section>
                     <div class="mb-3">
-                        <label class="form-label" for="DeleteItemFormFile">Item ID</label>
+                        <label class="form-label" for="DeleteItemFormFile">Item Code</label>
                         <div class="d-flex">
                             <input class="form-control me-1" id="DeleteItemFormFile" type="text">
                             <button class="btn btn-outline-success" id="itemSearchBtn"><i
@@ -392,36 +392,29 @@
                 <div class="col-12 row border-bottom border-start border-end m-0" style="border-color: #d9d9d9">
                     <div class="col-6 pb-1">
                         <label class="form-label" for="orderId">Order ID</label>
-                        <input class="form-control" id="orderId" placeholder="ID" type="text">
+                        <input class="form-control" id="orderId" placeholder="ID" type="text" disabled>
                     </div>
                     <div class="col-6 pb-1">
                         <label class="form-label" for="lblDate">Date</label>
                         <input class="form-control" id="lblDate" placeholder="Example input placeholder" type="date">
                     </div>
-                    <div class="col-6 pb-1">
-                        <label class="form-label" for="lblCustomer">Customer</label>
-                        <select aria-label="Default select example" class="form-control" id="lblCustomer">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                    <div class="col-12 pb-1">
+                        <label class="form-label" for="lblCustomerId">Customer ID</label>
+                        <select aria-label="Default select example" class="form-control" id="lblCustomerId" placeholder="ID">
+                            <option selected>Select Customer ID</option>
                         </select>
                     </div>
                     <div class="col-6 pb-1">
-                        <label class="form-label" for="lblCustomerId">Customer ID</label>
-                        <input class="form-control" id="lblCustomerId" placeholder="ID" type="text">
-                    </div>
-                    <div class="col-6 pb-1">
-                        <label class="form-label" for="lblName">Name</label>
-                        <input class="form-control" id="lblName" placeholder="Name" type="text">
+                        <label class="form-label" for="lblCustomer">Customer Name</label>
+                        <input class="form-control" id="lblCustomer" placeholder="Name" type="text" disabled>
                     </div>
                     <div class="col-6 pb-1">
                         <label class="form-label" for="lblTel">Contact No</label>
-                        <input class="form-control" id="lblTel" placeholder="0771236549" type="text">
+                        <input class="form-control" id="lblTel" placeholder="0771236549" type="text" disabled>
                     </div>
                     <div class="col-12 pb-4">
                         <label class="form-label" for="lblAddress">Address</label>
-                        <input class="form-control" id="lblAddress" placeholder="Galle" type="text">
+                        <input class="form-control" id="lblAddress" placeholder="Galle" type="text" disabled>
                     </div>
                 </div>
             </div>
@@ -438,23 +431,20 @@
                     <div class="col-6 pb-3">
                         <label class="form-label" for="lblItemCode">Item Code</label>
                         <select aria-label="Default select example" class="form-control" id="lblItemCode">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option selected>Select Item Code</option>
                         </select>
                     </div>
                     <div class="col-6 pb-3">
                         <label class="form-label" for="lblItem">Item Name</label>
-                        <input class="form-control" id="lblItem" placeholder="Name" type="text">
+                        <input class="form-control" id="lblItem" placeholder="Name" type="text" disabled>
                     </div>
                     <div class="col-6 pb-3">
                         <label class="form-label" for="lblPrice">Price</label>
-                        <input class="form-control" id="lblPrice" placeholder="100.0" type="text">
+                        <input class="form-control" id="lblPrice" placeholder="100.0" type="text" disabled>
                     </div>
                     <div class="col-6 pb-3">
                         <label class="form-label" for="qtyOnH">Qty On Hand</label>
-                        <input class="form-control" id="qtyOnH" placeholder="100" type="text">
+                        <input class="form-control" id="qtyOnH" placeholder="100" type="text" disabled>
                     </div>
                     <div class="col-12 pb-3">
                         <label class="form-label" for="orderQty">Order Quantity</label>
