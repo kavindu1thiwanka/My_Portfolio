@@ -31,6 +31,8 @@ $('#addItemButton').click(function () {
 
     loadItemsForOrder();
 
+    totalItemCalculate();
+
     defaultAllTextItem();
 });
 
@@ -79,6 +81,7 @@ $('#deleteItemBtn').click(function () {
         alert("No such item to delete. please check the id");
     }
     defaultAllTextItem();
+    totalItemCalculate();
 });
 
 //Update Items

@@ -30,6 +30,8 @@ $('#addCustomerButton').click(function () {
 
     loadCustomersForOrder();
 
+    totalCustomerCalculate();
+
     defaultAllTextCustomer();
 });
 
@@ -78,6 +80,7 @@ $('#customerDeleteBtn').click(function () {
         alert("No such customer to delete. please check the id");
     }
     defaultAllTextCustomer();
+    totalCustomerCalculate();
 });
 
 //Update Customer

@@ -55,3 +55,31 @@ $("#orderNav").click(function () {
     $("#itemNav").css('background', '#f8f9fa');
     $("#orderNav").css('background', '#e6f2ff');
 });
+
+function loadAllRecentSalesData() {
+    $('#recentSaleTbl').empty();
+    for (var rs of orders) {
+        var row = `<tr><td>${rs.invoiceID}</td><td>${rs.orderDate}</td><td>${rs.custName}</td><td>${rs.itemAmount}</td><td>${rs.totPrice}</td></tr>`;
+        $('#recentSaleTbl').append(row);
+    }
+
+    totalSaleCalculate();
+    totalItemCalculate();
+    totalCustomerCalculate();
+}
+
+function totalSaleCalculate() {
+    let totalSaleSum = 0;
+    for (var s of orders) {
+        totalSaleSum = totalSaleSum+Number(s.totPrice);
+    }
+    $('#totalSalePrice').text(totalSaleSum+" Rs/=");
+}
+
+function totalItemCalculate() {
+    $('#itemCount').text(items.length);
+}
+
+function totalCustomerCalculate() {
+    $('#customerCount').text(customers.length);
+}

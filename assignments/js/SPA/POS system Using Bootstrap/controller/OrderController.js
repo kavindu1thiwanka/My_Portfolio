@@ -157,7 +157,7 @@ $("#txtDiscount").on('keyup', function (event) {
 $('#btnSubmitOrder').click(function (){
 
     let invoID = $("#orderId").val();
-    let orDate = $("#lblDate").val();
+    let orDate = $('#lblDate').val();
     let cusName = $("#lblCustomer").val();
     let itemsAmo = orderItems.length;
     let totalPrice = finalTotal;
@@ -172,7 +172,12 @@ $('#btnSubmitOrder').click(function (){
     }
     orders.push(orderObject);
 
+    loadAllRecentSalesData();
+
+    totalSaleCalculate();
+
     generateOrderID();
+
     clearAllTextField();
 });
 
