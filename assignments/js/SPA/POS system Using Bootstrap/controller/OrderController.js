@@ -179,6 +179,8 @@ $('#btnSubmitOrder').click(function (){
     generateOrderID();
 
     clearAllTextField();
+
+    orderItems = [];
 });
 
 function clearAllTextField() {
