@@ -33,7 +33,28 @@ $('#addItemButton').click(function () {
 
     totalItemCalculate();
 
+    generateItemID();
+
     defaultAllTextItem();
+});
+
+function generateItemID() {
+    if (items.length === 0){
+        $('#AddItemFormFile').val("I-001");
+    }else {
+        let itemCount = items.length + 1;
+        if (itemCount < 10){
+            $('#AddItemFormFile').val("I-00"+ itemCount);
+        }else if (itemCount < 100){
+            $('#AddItemFormFile').val("I-0"+ itemCount);
+        }else if (itemCount < 100000){
+            $('#AddItemFormFile').val("I-"+ itemCount);
+        }
+    }
+}
+
+$('#itemNav').click(function () {
+    generateItemID();
 });
 
 //Search Items
