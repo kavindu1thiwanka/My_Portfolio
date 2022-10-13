@@ -32,7 +32,28 @@ $('#addCustomerButton').click(function () {
 
     totalCustomerCalculate();
 
+    generateCustomerID();
+
     defaultAllTextCustomer();
+});
+
+function generateCustomerID() {
+    if (customers.length === 0){
+        $('#AddCustomerFormFile').val("C-001");
+    }else {
+        let customerCount = customers.length + 1;
+        if (customerCount < 10){
+            $('#AddCustomerFormFile').val("C-00"+ customerCount);
+        }else if (customerCount < 100){
+            $('#AddCustomerFormFile').val("C-0"+ customerCount);
+        }else if (customerCount < 100000){
+            $('#AddCustomerFormFile').val("C-"+ customerCount);
+        }
+    }
+}
+
+$('#customerNav').click(function () {
+    generateCustomerID();
 });
 
 //Search Customer
