@@ -41,7 +41,7 @@ $('#lblItemCode').click(function () {
 });
 
 $("#orderQty").on('keyup', function (event) {
-    if ($("#orderQty").val() == null | $("#orderQty").val() == 0) {
+    if ($("#orderQty").val() == null | $("#orderQty").val() == 0 | $("#qtyOnH").val() == 0) {
         $('#addItemOnOrder').attr('disabled', true);
     } else {
         $('#addItemOnOrder').attr('disabled', false);
