@@ -70,8 +70,8 @@ function searchItems(itemID) {
 function setItemTextFieldValues(id, name, qty, price) {
     $("#DeleteItemFormFile").val(id);
     $("#DeleteItemFormFileMultiple").val(name);
-    $("#DeleteItemFormFileDisabled").val(qty);
-    $("#DeleteItemFormFileSm").val(price);
+    $("#DeleteItemFormFileSm").val(qty);
+    $("#DeleteItemFormFileDisabled").val(price);
 }
 
 $('#itemSearchBtn').click(function () {
