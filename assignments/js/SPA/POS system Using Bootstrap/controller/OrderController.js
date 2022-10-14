@@ -176,12 +176,25 @@ $('#btnSubmitOrder').click(function (){
 
     totalSaleCalculate();
 
+    orderBalanceSet();
+
     generateOrderID();
 
     clearAllTextField();
 
     orderItems = [];
 });
+
+function orderBalanceSet() {
+    let orderFinalBalance = Number($('#txtCash').val()) - Number($('#subtotal').text());
+    $('#InvoiceIdModal').text($('#orderId').val());
+    $('#discountModal').text($('#txtDiscount').val() + " %");
+    $('#cashModal').text($('#txtCash').val() + " Rs/=");
+    $('#subTotalModal').text($('#subtotal').text() + " Rs/=");
+    $('#balanceModal').text(orderFinalBalance + " Rs/=");
+
+    $('#PurchaseModal').modal('show');
+}
 
 function clearAllTextField() {
     $('#orderTbl').empty();
