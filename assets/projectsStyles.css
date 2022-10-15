@@ -150,3 +150,175 @@ footer > div > a > i {
 footer > div > a > i:hover {
     color: red;
 }
+
+@media all and (max-width: 320px) {
+
+    main > section:nth-child(1) > div > h1 {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+
+    main > section:nth-child(1) > div > a > i {
+        font-size: 30px;
+    }
+
+    main > section:nth-child(2) > div {
+        top: 40px;
+        margin-left: 0px;
+        height: 460px;
+        margin-right: 0px;
+    }
+
+    main > section:nth-child(2) > div > aside > a > img {
+        height: 170px;
+        width: 240px;
+    }
+
+    main > section:nth-child(2) > div > aside:nth-child(1) {
+        text-align: center;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+    }
+
+    main > section:nth-child(2) > div > aside:nth-child(2) {
+        text-align: center;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    main > section:nth-child(2) > div > aside > h1 > a {
+        font-size: 28px;
+        margin-left: 0px;
+    }
+
+    main > section:nth-child(2) > div > aside:nth-child(2) > p {
+        font-size: 14px;
+        margin-left: 0px;
+        !important;
+    }
+
+}
+
+@media all and (min-width: 321px) and (max-width: 375px) {
+
+    main > section:nth-child(1) > div > h1 {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+
+    main > section:nth-child(1) > div > a > i {
+        font-size: 30px;
+    }
+
+    main > section:nth-child(2) > div {
+        top: 40px;
+        margin-left: 0px;
+        height: 460px;
+        margin-right: 0px;
+    }
+
+    main > section:nth-child(2) > div > aside > a > img {
+        height: 170px;
+        width: 240px;
+    }
+
+    main > section:nth-child(2) > div > aside:nth-child(1) {
+        text-align: center;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+    }
+
+    main > section:nth-child(2) > div > aside:nth-child(2) {
+        text-align: center;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    main > section:nth-child(2) > div > aside > h1 > a {
+        font-size: 28px;
+        margin-left: 0px;
+    }
+
+    main > section:nth-child(2) > div > aside:nth-child(2) > p {
+        font-size: 14px;
+        margin-left: 0px;
+    !important;
+    }
+}
+
+@media all and (min-width: 376px) and (max-width: 425px) {
+
+    main > section:nth-child(1) > div > h1 {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+
+    main > section:nth-child(1) > div > a > i {
+        font-size: 30px;
+    }
+
+    main > section:nth-child(2) > div {
+        top: 40px;
+        margin-left: 0px;
+        height: 460px;
+        margin-right: 0px;
+    }
+
+    main > section:nth-child(2) > div > aside > a > img {
+        height: 170px;
+        width: 240px;
+    }
+
+    main > section:nth-child(2) > div > aside:nth-child(1) {
+        text-align: center;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+    }
+
+    main > section:nth-child(2) > div > aside:nth-child(2) {
+        text-align: center;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    main > section:nth-child(2) > div > aside > h1 > a {
+        font-size: 28px;
+        margin-left: 0px;
+    }
+
+    main > section:nth-child(2) > div > aside:nth-child(2) > p {
+        font-size: 14px;
+        margin-left: 0px;
+    !important;
+    }
+}
+
+@media all and (min-width: 426px) and (max-width: 768px) {
+
+    main > section:nth-child(2) > div > aside > a > img {
+        height: 260px;
+        width: 360px;
+    }
+
+    main > section:nth-child(2) > div > aside:nth-child(2){
+        left: 360px;
+        padding-top: 0;
+    }
+
+    main > section:nth-child(2) > div > aside:nth-child(2) > h1 > a {
+        font-size: 28px;
+        margin-top: -30px;
+    }
+}
