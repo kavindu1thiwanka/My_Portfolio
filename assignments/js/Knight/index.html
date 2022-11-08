@@ -81,6 +81,7 @@
     }
     var intervalID;
     var audio = new Audio('assets/sounds/K I T T  Scanner Sound HD (320 kbps).mp3');
+    audio.loop="loop";
 
     $('#btnStart').click(function (){
         intervalID = setInterval(renderKnightRider, 100);
