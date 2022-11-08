@@ -65,7 +65,7 @@
     }
 
     var count=0;
-    
+
     function animate(){
         count++;
         if (count<=leftColors.length){
@@ -80,13 +80,16 @@
         }
     }
     var intervalID;
+    var audio = new Audio('assets/sounds/K I T T  Scanner Sound HD (320 kbps).mp3');
 
     $('#btnStart').click(function (){
         intervalID = setInterval(renderKnightRider, 100);
+        audio.play();
     });
 
     $('#btnStop').click(function (){
         clearInterval(intervalID);
+        audio.pause();
     });
 
     function renderKnightRider(){
