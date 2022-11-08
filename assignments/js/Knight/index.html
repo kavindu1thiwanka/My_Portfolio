@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knight Rider’s theme light system</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        body{
+            background-color: black;
+        }
+        #divContainer{
+            display: flex;
+            height: 30px;
+        }
+        #divContainer>div{
+            width: 100%;
+            height: 30px;
+            margin: 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+<section class="container-fluid">
+    <section class="row">
+        <div class="col-12">
+            <h1 class="text-center text-white" id="header">JavaScript Knight Rider</h1>
+        </div>
+    </section>
+
+    <hr color="white">
+    <section class="row">
+        <section class="col-12" id="divContainer">
+
+        </section>
+    </section>
+
+    <hr color="white">
+
+    <section class="row justify-content-center">
+        <div class="col-3 d-flex justify-content-around">
+            <button class="btn btn-primary pl-5 pr-5" id="btnStart">Start</button>
+            <button class="btn btn-danger pl-5 pr-5" id="btnStop">Stop</button>
+        </div>
+    </section>
+</section>
+
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script>
+    var initArray=[];
+    var leftColors=['white','white','white','white','white','white','#d3c5c5','#be7474','#cd4a4a','#b83030','#c52525','#dc1e1e'];
+    var rightColors=['white','white','white','white','white','white','#dc1e1e','#c52525','#b83030','#cd4a4a','#be7474','#d3c5c5'];
+
+
+    function animateRight(){
+        let firstValue=initArray.shift();
+        initArray.push(firstValue);
+    }
+
+    function animateLeft(){
+        let lastColor=initArray.pop();
+        initArray.unshift(lastColor);
+    }
+
+    var count=0;
+    
+    function animate(){
+        count++;
+        if (count<=leftColors.length){
+            initArray=leftColors;
+            animateLeft();
+        }else{
+            if (count>=(leftColors.length*2)){
+                count=0;
+            }
+            initArray=rightColors;
+            animateRight();
+        }
+    }
+    var intervalID;
+
+    $('#btnStart').click(function (){
+        intervalID = setInterval(renderKnightRider, 100);
+    });
+
+    $('#btnStop').click(function (){
+        clearInterval(intervalID);
+    });
+
+    function renderKnightRider(){
+        $("#divContainer").empty();
+        for (let i = 0; i < (initArray.length)/2; i++) {
+            $("#divContainer").append(`<div class="rounded" style="background-color: ${initArray[i]}"></div>`)
+        }
+        animate();
+    }
+
+
+</script>
+</body>
+</html>
