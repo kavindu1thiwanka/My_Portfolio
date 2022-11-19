@@ -8,11 +8,26 @@
 </head>
 <body class="body">
 <div class="background">
+    <div id="cursor"></div>
     <div class="soil"></div>
     <div class="bush1"></div>
     <div class="bush2"></div>
     <div class="bush3"></div>
 </div>
 
+
+
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
+<script>
+    //mouse tracking
+
+    $(window).on('mousemove', function (event) {
+        $("#cursor").css({'top':event.pageY, 'left':event.pageX});
+    });
+
+
+    //enemy span
+    
+</script>
 </body>
 </html>
