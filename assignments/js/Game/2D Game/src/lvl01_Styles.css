@@ -1,5 +1,9 @@
 .body{
     margin: 0;
+    padding: 0;
+    cursor: none;
+    width: 100vw;
+    height: 100vh;
 }
 
 #cursor{
@@ -14,6 +18,7 @@
     transform: translate(-50%,-50%);
     pointer-events: none;
     box-sizing: border-box;
+    z-index: 4;
 }
 
 .background{
@@ -25,6 +30,59 @@
     background-position: center;
     z-index: 1;
 }
+
+
+
+/*#health{*/
+/*    position: absolute;*/
+/*    display: flex;*/
+/*    bottom: 1%;*/
+/*    left: 4%;*/
+/*    z-index: 5;*/
+/*}*/
+
+/*#health>div{*/
+/*    background-image: url("assets/Level 1/Heart.png");*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    margin: 5px;*/
+/*}*/
+
+.score_enemyContainer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 1%;
+    top: 1%;
+    z-index: 5;
+}
+#enemyRemainCount{
+    display: flex;
+}
+#enemyRemainCount>h1 {
+    font-size: 23px;
+}
+
+#scoreBoard{
+    justify-content: center;
+    display: flex;
+    width: 20vw;
+    height: 10vh;
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    opacity: 10;
+    border-radius: 20px;
+    z-index: 5;
+}
+
+#scoreBoard>h1{
+    font-size: 2em;
+    opacity: 10;
+    color: rgba(0, 0, 0, 0.88);
+}
+
 .soil{
     position: absolute;
     width: 100vw;

@@ -7,13 +7,27 @@
     <link rel="stylesheet" href="../assets/normalize.css">
 </head>
 <body class="body">
-<div class="background">
+<main>
+    <div class="background">
+        <div class="soil"></div>
+        <div class="bush1"></div>
+        <div class="bush2"></div>
+        <div class="bush3"></div>
+    </div>
+
     <div id="cursor"></div>
-    <div class="soil"></div>
-    <div class="bush1"></div>
-    <div class="bush2"></div>
-    <div class="bush3"></div>
-</div>
+    <div class="score_enemyContainer">
+        <div id="scoreBoard">
+            <h1>Score : </h1>
+            <h1 id="score"> 00</h1>
+        </div>
+        <div id="enemyRemainCount">
+            <h1>Enemies Left : </h1>
+            <h1>00</h1>
+        </div>
+    </div>
+</main>
+
 
 
 
@@ -27,7 +41,43 @@
 
 
     //enemy span
-    
+    canvas = document.getElementById('mycanvas');
+    gameover = false;
+
+    // pen is an object created using the getContext() function.
+    pen = canvas.getContext('2d'); // 2d is passed to make 2d games in html
+
+    function enemy(x,y,speed){
+        this.x = x;
+        this.y = y;
+        this.w = 50;
+        this.h = 50;
+        this.state = "active"
+        this.speed = speed;
+
+        this.draw = function(enemyImage){
+
+            pen.drawImage(enemyImage,this.x,this.y,this.w,this.h);
+
+        }
+
+        this.update = function(){
+
+            this.x = this.x + this.speed;
+
+            // To test the boundary conditions
+            if(this.x >= W-this.w || this.x<=0){
+                this.speed *= -1;
+            }
+
+            this.y++;
+
+            if(this.y<=0){
+                this.state = "inactive"
+            }
+        }
+
+    }
 </script>
 </body>
 </html>
