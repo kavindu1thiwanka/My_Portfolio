@@ -1,16 +1,17 @@
 .body{
     margin: 0;
     padding: 0;
-    cursor: none;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
+    cursor: none;
 }
 
 #cursor{
     top: 50%;
     left: 50%;
     position: absolute;
-    background-image: url("assets/Level 1/crosshair/crosshair068.png");
+    background-image: url("../../assets/Level 1/crosshair/crosshair068.png");
     background-size: cover;
     background-position: center;
     width: 50px;
@@ -18,51 +19,65 @@
     transform: translate(-50%,-50%);
     pointer-events: none;
     box-sizing: border-box;
-    z-index: 4;
+}
+#enemyContainer{
+    position: absolute;
+    width: 100vw;
+    height: 25%;
+    bottom: 15%;
+}
+
+#enemyContainer>div:nth-child(1){
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#enemy{
+    position: absolute;
+    height: 100%;
+    width: 200px;
 }
 
 .background{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("assets/Level 1/Hills Free (update 3.0).png");
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    background-image: url("../../assets/Level 1/Hills Free (update 3.0).png");
     background-size: cover;
     background-position: center;
-    z-index: 1;
 }
 
-
-
-/*#health{*/
-/*    position: absolute;*/
-/*    display: flex;*/
-/*    bottom: 1%;*/
-/*    left: 4%;*/
-/*    z-index: 5;*/
-/*}*/
-
-/*#health>div{*/
-/*    background-image: url("assets/Level 1/Heart.png");*/
-/*    width: 50px;*/
-/*    height: 50px;*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*    margin: 5px;*/
-/*}*/
-
 .score_enemyContainer{
+    justify-content: right;
     position: absolute;
     display: flex;
     flex-direction: column;
     right: 1%;
     top: 1%;
-    z-index: 5;
+
 }
-#enemyRemainCount{
+
+#score{
+    padding-left: 5px;
+}
+
+#canvas1{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+#enemyRemainCountContainer{
     display: flex;
+
 }
-#enemyRemainCount>h1 {
-    font-size: 23px;
+#enemyRemainCountContainer>h1 {
+    font-size: 20px;
+}
+#enemyRemainCountContainer>h1:nth-child(1) {
+    padding-right: 5px;
 }
 
 #scoreBoard{
@@ -74,7 +89,6 @@
     backdrop-filter: blur(10px);
     opacity: 10;
     border-radius: 20px;
-    z-index: 5;
 }
 
 #scoreBoard>h1{
@@ -88,10 +102,9 @@
     width: 100vw;
     height: 15%;
     bottom: 0;
-    background-image: url("assets/Level 1/soil-575643.png");
+    background-image: url("../../assets/Level 1/soil-575643.png");
     background-size: cover;
     background-position: center;
-    z-index: 3;
 }
 .bush1{
     position: absolute;
@@ -99,10 +112,9 @@
     height: 40%;
     bottom: 10px;
     right: 0;
-    background-image: url("assets/Level 1/bush-g0110af25f_1280.png");
+    background-image: url("../../assets/Level 1/bush-g0110af25f_1280.png");
     background-size: cover;
     background-position: center;
-    z-index: 3;
 }
 .bush2{
     position: absolute;
@@ -110,10 +122,9 @@
     height: 40%;
     bottom: 10px;
     right: 30%;
-    background-image: url("assets/Level 1/bush-ga35d1e709_1280.png");
+    background-image: url("../../assets/Level 1/bush-ga35d1e709_1280.png");
     background-size: cover;
     background-position: center;
-    z-index: 3;
 }
 .bush3{
     position: absolute;
@@ -121,8 +132,7 @@
     height: 40%;
     bottom: 0;
     left: 0;
-    background-image: url("assets/Level 1/bush-g0110af25f_1280.png");
+    background-image: url("../../assets/Level 1/bush-g0110af25f_1280.png");
     background-size: cover;
     background-position: center;
-    z-index: 3;
 }
