@@ -9,16 +9,13 @@
 <body class="body">
 <main>
     <div class="background"></div>
-    <div class="soil"></div>
     <div id="enemyContainer">
         <div>
             <div id="enemy"></div>
         </div>
     </div>
     <div class="bush1"></div>
-    <div class="bush2"></div>
-    <div class="bush3"></div>
-
+    <div id="hunter"></div>
     <div id="cursor"></div>
     <div class="score_enemyContainer">
         <div id="scoreBoard">
@@ -51,8 +48,6 @@
         constructor(x,y) {
             this.x = x;
             this.y = y;
-            this.w = 40;
-            this.h = 40;
         }
 
         draw(){
@@ -62,9 +57,6 @@
             enemyDIV.style.top = this.y+'px';
         }
 
-        remove(xDirec,yDirec){
-
-        }
     }
 
     let enemiesLeft = $('#enemyRemainCount').text();
@@ -89,10 +81,16 @@
             lastRandom=random;
             enemiesLeft=enemiesLeft-1;
             $('#enemyRemainCount').text(enemiesLeft);
-        }else {
+        }else if (enemiesLeft==0) {
             //game over seen
+            console.log("Game Over");
         }
     }
+
+    enemyDIV.addEventListener('click', function () {
+        spawnEnemies();
+    },false);
+
     spawnEnemies();
 </script>
 </body>
