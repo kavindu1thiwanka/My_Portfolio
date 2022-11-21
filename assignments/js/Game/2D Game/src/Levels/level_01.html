@@ -17,6 +17,9 @@
     <div class="bush1"></div>
     <div id="hunter"></div>
     <div id="cursor"></div>
+    <img height="150px" width="150px" id="enemy01" src="../assets/Level 1/SVG/red monster.svg">
+    <img height="150px" width="75px" id="enemy02" src="../assets/Level 1/SVG/s monster.svg">
+    <img height="150px" width="150px" id="enemy03" src="../assets/Level 1/SVG/p monster.svg">
     <div class="score_enemyContainer">
         <div id="scoreBoard">
             <h1>Score : </h1>
@@ -29,20 +32,19 @@
     </div>
 </main>
 
-
-
-
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script>
     //mouse tracking
     $(window).on('mousemove', function (event) {
         $("#cursor").css({'top':event.pageY, 'left':event.pageX});
-        console.log('y '+event.pageY +' x '+event.pageX);
     });
 
     var enemyDIV = document.getElementById('enemy');
-    enemyImage = new Image();
-    enemyImage.src="assets/Level 1/Heart.png";
+    let enemiesLeft = $('#enemyRemainCount').text();
+    const xDirection = [70,250,400,525,795];
+    let lastRandom =-1;
+    let lastRandomEnemy =-1;
+    let random, enemyS , randomEnemy;
 
     class Enemy{
         constructor(x,y) {
@@ -51,7 +53,7 @@
         }
 
         draw(){
-            enemyDIV.appendChild(enemyImage);
+            enemyDIV.appendChild(monsters[randomEnemy]);
             enemyDIV.style.position = "absolute";
             enemyDIV.style.left = this.x+'px';
             enemyDIV.style.top = this.y+'px';
@@ -59,28 +61,30 @@
 
     }
 
-    let enemiesLeft = $('#enemyRemainCount').text();
-    const xDirection = [40,400,795,1120];
-    let lastRandom=-1;
-    let random, enemyS;
-
     function spawnEnemies(){
         if (enemiesLeft>0){
+            console.log("lastRandomEnemy "+lastRandomEnemy);
             random = Math.floor(Math.random() * xDirection.length);
+            randomEnemy = Math.floor(Math.random() * monsters.length);
+
             while (lastRandom==random){
                 random = Math.floor(Math.random() * xDirection.length);
             }
-            console.log("xDirection[random] "+xDirection[random]+" "+75);
+            while (lastRandomEnemy==randomEnemy){
+                randomEnemy = Math.floor(Math.random() * monsters.length);
+            }
+            console.log("randomEnemy "+randomEnemy);
+
             enemyS = new Enemy(xDirection[random],0);
             enemyS.draw();
 
-            // setTimeout(()=>{
-            //     enemy.remove(xDirection[random],75);
-            // },1000)
-
             lastRandom=random;
+            lastRandomEnemy=randomEnemy;
+            console.log("lastRandomEnemy "+lastRandomEnemy);
+
             enemiesLeft=enemiesLeft-1;
             $('#enemyRemainCount').text(enemiesLeft);
+
         }else if (enemiesLeft==0) {
             //game over seen
             console.log("Game Over");

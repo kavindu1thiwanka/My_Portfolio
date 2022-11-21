@@ -4,6 +4,7 @@
     overflow: hidden;
     width: 100vw;
     height: 100vh;
+    cursor: none;
 }
 
 #hunter{
@@ -34,23 +35,19 @@
     position: absolute;
     width: 70vw;
     height: 30%;
-    bottom: 15%;
+    bottom: 18%;
     left: 20%;
-    border: 2px solid black;
 }
 
 #enemyContainer>div:nth-child(1){
     position: relative;
     width: 100%;
     height: 100%;
-    border: 2px solid red;
 }
 
 #enemy{
     position: absolute;
     height: 100%;
-    width: 200px;
-    border: 2px solid yellow;
 }
 
 .background{
