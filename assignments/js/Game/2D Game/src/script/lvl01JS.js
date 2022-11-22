@@ -6,26 +6,34 @@ $(window).on('mousemove', function (event) {
 function playLVL1Music(){
     let audio2 = document.getElementById("lvl01BackgroundAudio");
     audio2.play();
-    audio2.volume = 20;
+    audio2.volume = 1;
 }
 function playSniperSound(){
     let audio3 = document.getElementById("sniper");
     audio3.loop=false;
     audio3.play();
 }
+function playGameOverSound(){
+    let audio4 = document.getElementById("gameOverSound");
+    audio4.loop=false;
+    audio4.play();
+}
 
 var enemyDIV = document.getElementById('enemy');
+var gameOverDIV = document.getElementById('gameOver');
 let enemiesLeft = $('#enemyRemainCount').text();
 ///////// Enemy Images /////////
 const enemy01=document.getElementById('enemy01');
 const enemy02=document.getElementById('enemy02');
 const enemy03=document.getElementById('enemy03');
 ////////////////////////////////
+const gameOverImg=document.getElementById('gameOverImg');
 const monsters =[enemy01,enemy02,enemy03];
 const xDirection = [70,250,400,525,795];
 let lastRandom =-1;
 let lastRandomEnemy =-1;
 let random, enemyS , randomEnemy;
+let missedEnemyCount=0;
 
 class Enemy{
     constructor(x,y) {
@@ -39,6 +47,20 @@ class Enemy{
         enemyDIV.style.position = "absolute";
         enemyDIV.style.left = this.x+'px';
         enemyDIV.style.top = this.y+'px';
+        removeEnemy();
+    }
+
+    removeANDGameOver(){
+        if (missedEnemyCount<3){
+            enemyDIV.innerHTML = "";
+            missedEnemyCount=missedEnemyCount+1;
+            spawnEnemies();
+        }else {
+            enemyDIV.innerHTML = "";
+            gameOverDIV.innerHTML = "";
+            gameOverDIV.appendChild(gameOverImg);
+            playGameOverSound();
+        }
     }
 
 }
@@ -65,22 +87,26 @@ function spawnEnemies(){
         $('#enemyRemainCount').text(enemiesLeft);
 
     }else if (enemiesLeft==0) {
-        //game over seen
-        console.log("Game Over");
+        //go to next level seen
+        enemyDIV.innerHTML = "";
     }
+}
+
+function removeEnemy(){
+    removeTimer = setTimeout(()=>{
+        enemyS.removeANDGameOver();
+    },1500);
 }
 
 let score = 0;
 
 enemyDIV.addEventListener('click', function () {
+    clearTimeout(removeTimer);
     playSniperSound();
     spawnEnemies();
     score=score+1;
     $('#score').text(score);
 },false);
 
-setTimeout(() => {
-    document.getElementById('lvl01BackgroundAudio').play();
-}, 500)
 
 spawnEnemies();
