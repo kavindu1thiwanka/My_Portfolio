@@ -18,6 +18,11 @@ function playGameOverSound(){
     audio4.loop=false;
     audio4.play();
 }
+function playGameCompleteSound(){
+    let audio5 = document.getElementById("gameCompleteSound");
+    audio5.loop=false;
+    audio5.play();
+}
 
 var enemyDIV = document.getElementById('enemy');
 var gameOverDIV = document.getElementById('gameOver');
@@ -28,6 +33,7 @@ const enemy02=document.getElementById('enemy02');
 const enemy03=document.getElementById('enemy03');
 ////////////////////////////////
 const gameOverImg=document.getElementById('gameOverImg');
+const gameCompleteImg=document.getElementById('gameCompleteImg');
 const monsters =[enemy01,enemy02,enemy03];
 const xDirection = [70,250,400,525,795];
 let lastRandom =-1;
@@ -89,6 +95,9 @@ function spawnEnemies(){
     }else if (enemiesLeft==0) {
         //go to next level seen
         enemyDIV.innerHTML = "";
+        gameOverDIV.innerHTML = "";
+        gameOverDIV.appendChild(gameCompleteImg);
+        playGameCompleteSound();
     }
 }
 
