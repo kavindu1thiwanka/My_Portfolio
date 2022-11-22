@@ -1,9 +1,26 @@
 $(window).on('mousemove', function (event) {
     $("#cursor").css({'top':event.pageY, 'left':event.pageX});
+    playLVL1Music();
 });
+
+function playLVL1Music(){
+    let audio2 = document.getElementById("lvl01BackgroundAudio");
+    audio2.play();
+    audio2.volume = 20;
+}
+function playSniperSound(){
+    let audio3 = document.getElementById("sniper");
+    audio3.loop=false;
+    audio3.play();
+}
 
 var enemyDIV = document.getElementById('enemy');
 let enemiesLeft = $('#enemyRemainCount').text();
+///////// Enemy Images /////////
+const enemy01=document.getElementById('enemy01');
+const enemy02=document.getElementById('enemy02');
+const enemy03=document.getElementById('enemy03');
+////////////////////////////////
 const monsters =[enemy01,enemy02,enemy03];
 const xDirection = [70,250,400,525,795];
 let lastRandom =-1;
@@ -17,6 +34,7 @@ class Enemy{
     }
 
     draw(){
+        enemyDIV.innerHTML = "";
         enemyDIV.appendChild(monsters[randomEnemy]);
         enemyDIV.style.position = "absolute";
         enemyDIV.style.left = this.x+'px';
@@ -27,7 +45,6 @@ class Enemy{
 
 function spawnEnemies(){
     if (enemiesLeft>0){
-        console.log("lastRandomEnemy "+lastRandomEnemy);
         random = Math.floor(Math.random() * xDirection.length);
         randomEnemy = Math.floor(Math.random() * monsters.length);
 
@@ -37,14 +54,12 @@ function spawnEnemies(){
         while (lastRandomEnemy==randomEnemy){
             randomEnemy = Math.floor(Math.random() * monsters.length);
         }
-        console.log("randomEnemy "+randomEnemy);
 
         enemyS = new Enemy(xDirection[random],0);
         enemyS.draw();
 
         lastRandom=random;
         lastRandomEnemy=randomEnemy;
-        console.log("lastRandomEnemy "+lastRandomEnemy);
 
         enemiesLeft=enemiesLeft-1;
         $('#enemyRemainCount').text(enemiesLeft);
@@ -55,8 +70,17 @@ function spawnEnemies(){
     }
 }
 
+let score = 0;
+
 enemyDIV.addEventListener('click', function () {
+    playSniperSound();
     spawnEnemies();
+    score=score+1;
+    $('#score').text(score);
 },false);
+
+setTimeout(() => {
+    document.getElementById('lvl01BackgroundAudio').play();
+}, 500)
 
 spawnEnemies();
