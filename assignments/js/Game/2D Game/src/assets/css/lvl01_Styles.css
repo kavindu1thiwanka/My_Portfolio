@@ -27,7 +27,7 @@
     top: 50%;
     left: 50%;
     position: absolute;
-    background-image: url("../Level 1/crosshair/crosshair068.png");
+    background-image: url("../index/crosshair/crosshair068.png");
     background-size: cover;
     background-position: center;
     width: 50px;
@@ -72,7 +72,6 @@
     flex-direction: column;
     right: 1%;
     top: 1%;
-
 }
 
 #score{
@@ -121,4 +120,25 @@
     background-image: url("../Level 1/SVG/bush C.svg");
     background-size: cover;
     background-position: center;
+}
+
+#health{
+    position: absolute;
+    right: 1%;
+    bottom: 4%;
+}
+
+#health>div:nth-child(1){
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#health>div:nth-child(1)>div{
+    margin: 5px;
+    width: 8vw;
+    height: 9vh;
+    /*background-image: url("../../assets/index/heart x.svg");*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
 }

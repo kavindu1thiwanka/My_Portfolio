@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hunter</title>
+  <link rel="stylesheet" href="../assets/css/normalize.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../assets/css/lvl02_Styles.css">
+</head>
+<body class="body">
+<main>
+  <div class="lvl02_Background"></div>
+  <div id="lvl02_EnemyContainer">
+    <div>
+      <div id="lvl02_Enemy"></div>
+    </div>
+  </div>
+  <div class="lvl02_Bush1"></div>
+  <div id="lvl02_Hunter"></div>
+  <div id="gameOver"></div>
+  <div id="cursor"></div>
+
+  <img height="150px" width="150px" id="lvl02_Enemy01" src="../assets/Level 1/SVG/red monster.svg">
+  <img height="150px" width="75px" id="lvl02_Enemy02" src="../assets/Level 1/SVG/s monster.svg">
+  <img height="150px" width="150px" id="lvl02_Enemy03" src="../assets/Level 1/SVG/p monster.svg">
+  <img height="200px" width="800x" id="gameOverImg" src="../assets/index/game over.gif">
+  <img height="250px" width="800x" id="gameCompleteImg" src="../assets/index/level complete.gif">
+
+  <div class="lvl02_Score_enemyContainer">
+    <div id="lvl02_ScoreBoard">
+      <h1>Score : </h1>
+      <h1 id="lvl02_Score"> 00</h1>
+    </div>
+    <div id="lvl02_EnemyRemainCountContainer">
+      <h1>Enemies Left : </h1>
+      <h1 id="lvl02_EnemyRemainCount">20</h1>
+    </div>
+  </div>
+</main>
+
+<audio id="gameCompleteSound" loop src="../assets/sounds/“Level Complete” Sound Effect.mp3"></audio>
+<audio id="gameOverSound" loop src="../assets/sounds/Dead _ Sound Effects.mp3"></audio>
+<audio id="lvl01BackgroundAudio" loop src="../assets/sounds/dcpoke__birds-singing-03.mp3"></audio>
+<audio id="sniper" loop src="../assets/sounds/Old Sniper Sound Effect (320 kbps).mp3"></audio>
+
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
+<script src="../script/lvl02JS.js"></script>
+</body>
+</html>

@@ -31,7 +31,19 @@ let enemiesLeft = $('#enemyRemainCount').text();
 const enemy01=document.getElementById('enemy01');
 const enemy02=document.getElementById('enemy02');
 const enemy03=document.getElementById('enemy03');
-////////////////////////////////
+///////// heart Images /////////
+const heart1=document.getElementById('heart1');
+const heart2=document.getElementById('heart2');
+const heart3=document.getElementById('heart3');
+const heartImg1=document.getElementById('heartImg1');
+const heartImg2=document.getElementById('heartImg2');
+const heartImg3=document.getElementById('heartImg3');
+
+heart1.appendChild(heartImg1);
+heart2.appendChild(heartImg2);
+heart3.appendChild(heartImg3);
+
+///////////////////////////////
 const gameOverImg=document.getElementById('gameOverImg');
 const gameCompleteImg=document.getElementById('gameCompleteImg');
 const monsters =[enemy01,enemy02,enemy03];
@@ -57,14 +69,17 @@ class Enemy{
     }
 
     removeANDGameOver(){
-        if (missedEnemyCount<3){
+        if (missedEnemyCount<2){
             enemyDIV.innerHTML = "";
             missedEnemyCount=missedEnemyCount+1;
+            healthReduce();
             spawnEnemies();
         }else {
             enemyDIV.innerHTML = "";
             gameOverDIV.innerHTML = "";
             gameOverDIV.appendChild(gameOverImg);
+            missedEnemyCount=missedEnemyCount+1;
+            healthReduce();
             playGameOverSound();
         }
     }
@@ -117,5 +132,15 @@ enemyDIV.addEventListener('click', function () {
     $('#score').text(score);
 },false);
 
+function healthReduce(){
+    if (missedEnemyCount == 1){
+        heart1.innerHTML = "";
+    }else if (missedEnemyCount == 2){
+        heart2.innerHTML = "";
+    }
+    else if (missedEnemyCount == 3){
+        heart3.innerHTML = "";
+    }
+}
 
 spawnEnemies();
