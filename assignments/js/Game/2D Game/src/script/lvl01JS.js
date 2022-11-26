@@ -28,6 +28,11 @@ function playGameCompleteSound(){
 
 let enemyDIV = document.getElementById('enemy');
 let gameOverDIV = document.getElementById('gameOver');
+let LEVEL01 = document.getElementById('LEVEL01');
+let LEVEL01Img = document.getElementById('LEVEL01Img');
+
+LEVEL01.innerHTML="";
+LEVEL01.appendChild(LEVEL01Img);
 let enemiesLeft = $('#enemyRemainCount').text();
 ///////// Enemy Images /////////
 const enemy01=document.getElementById('enemy01');
@@ -115,7 +120,13 @@ function spawnEnemies(){
         gameOverDIV.innerHTML = "";
         gameOverDIV.appendChild(gameCompleteImg);
         playGameCompleteSound();
+        setTimeout(redirectLvl02,2500);
     }
+}
+
+function redirectLvl02() {
+    window.location =
+        "level_02.html"
 }
 
 function removeEnemy(){

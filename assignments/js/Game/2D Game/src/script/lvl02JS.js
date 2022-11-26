@@ -6,7 +6,7 @@ $(window).on('mousemove', function (e) {
 
 function playBackgroundMusic() {
     let lvl02_backgroundAudio = document.getElementById("lvl02_BackgroundAudio");
-    lvl02_backgroundAudio.volume = 0.3;
+    lvl02_backgroundAudio.volume = 0.2;
     lvl02_backgroundAudio.play();
 }
 
@@ -33,6 +33,12 @@ function playGameCompleteMusic_lvl02() {
 let lvl02_enemyDIV = document.getElementById("lvl02_enemy");
 let lvl02_gameOverDIV = document.getElementById("lvl02_gameOver");
 let lvl02_enemiesLeft = $('#lvl02_enemyRemainCount').text();
+
+let LEVEL02 = document.getElementById('LEVEL02');
+let LEVEL02Img = document.getElementById('LEVEL02Img');
+
+LEVEL02.innerHTML="";
+LEVEL02.appendChild(LEVEL02Img);
 
 const lvl02_enemy01 = document.getElementById('lvl02_enemy01');
 const lvl02_enemy02 = document.getElementById('lvl02_enemy02');
@@ -125,7 +131,7 @@ function lvl02_spawnEnemies(){
 function lvl02_removeEnemy(){
     lvl02_removeTimer = setTimeout(()=>{
         lvl02_enemyS.lvl02_removeAndGameOver();
-    },1200);
+    },1000);
 }
 
 let lvl02_score = 0;

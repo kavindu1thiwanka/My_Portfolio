@@ -139,3 +139,11 @@
     height: 9vh;
 }
 
+#LEVEL02{
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    height: 50px;
+    width: 100px;
+}
+

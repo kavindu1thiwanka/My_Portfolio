@@ -133,3 +133,11 @@
     width: 8vw;
     height: 9vh;
 }
+
+#LEVEL01{
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    height: 50px;
+    width: 100px;
+}
