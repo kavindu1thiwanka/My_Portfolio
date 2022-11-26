@@ -13,6 +13,7 @@ function playBackgroundMusic() {
 function playSniperSound_lvl02() {
     let lvl02_sniper = document.getElementById("lvl02_sniper");
     lvl02_sniper.loop = false;
+    lvl02_sniper.currentTime = 0;
     lvl02_sniper.play();
 }
 
@@ -154,5 +155,4 @@ function lvl02_healthReduce(){
         lvl02_heart3.innerHTML = "";
     }
 }
-
-lvl02_spawnEnemies();
+setTimeout(lvl02_spawnEnemies,1500);

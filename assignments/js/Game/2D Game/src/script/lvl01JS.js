@@ -11,6 +11,7 @@ function playLVL1Music(){
 function playSniperSound(){
     let audio3 = document.getElementById("sniper");
     audio3.loop=false;
+    audio3.currentTime = 0;
     audio3.play();
 }
 function playGameOverSound(){
@@ -155,5 +156,4 @@ function healthReduce(){
         heart3.innerHTML = "";
     }
 }
-
-spawnEnemies();
+setTimeout(spawnEnemies,1500);
