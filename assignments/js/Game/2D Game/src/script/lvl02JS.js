@@ -1,5 +1,6 @@
 $(window).on('mousemove', function (e) {
     $('#lvl02_cursor').css({'top': e.pageY, 'left': e.pageX});
+    console.log('top '+ e.pageY+ ' left '+ e.pageX);
     playBackgroundMusic();
 })
 
