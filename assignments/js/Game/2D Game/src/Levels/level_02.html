@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hunter</title>
-  <link rel="stylesheet" href="../assets/css/normalize.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../assets/css/lvl02_Styles.css">
+    <meta charset="UTF-8">
+    <title>Hunter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/lvl02_Style.css">
 </head>
-<body class="body">
+<body class="lvl02_Body">
 <main>
-  <div class="lvl02_Background"></div>
-  <div id="lvl02_EnemyContainer">
-    <div>
-      <div id="lvl02_Enemy"></div>
+    <div class="lvl02_Background"></div>
+    <div class="lvl02_enemyContainer">
+        <div>
+            <div id="lvl02_enemy"></div>
+        </div>
     </div>
-  </div>
-  <div class="lvl02_Bush1"></div>
-  <div id="lvl02_Hunter"></div>
-  <div id="gameOver"></div>
-  <div id="cursor"></div>
+    <div class="lvl02_bush"></div>
+    <div id="lvl02_hunter"></div>
+    <div id="lvl02_gameOver"></div>
+    <div id="lvl02_health">
+        <div>
+            <div id="lvl02_heart1"></div>
+            <div id="lvl02_heart2"></div>
+            <div id="lvl02_heart3"></div>
+        </div>
+    </div>
+    <div id="lvl02_cursor"></div>
 
-  <img height="150px" width="150px" id="lvl02_Enemy01" src="../assets/Level 1/SVG/red monster.svg">
-  <img height="150px" width="75px" id="lvl02_Enemy02" src="../assets/Level 1/SVG/s monster.svg">
-  <img height="150px" width="150px" id="lvl02_Enemy03" src="../assets/Level 1/SVG/p monster.svg">
-  <img height="200px" width="800x" id="gameOverImg" src="../assets/index/game over.gif">
-  <img height="250px" width="800x" id="gameCompleteImg" src="../assets/index/level complete.gif">
+    <img height="150px" width="150px" id="lvl02_enemy01" src="../assets/Level 1/SVG/red monster.svg">
+    <img height="150px" width="75px" id="lvl02_enemy02" src="../assets/Level 1/SVG/s monster.svg">
+    <img height="150px" width="150px" id="lvl02_enemy03" src="../assets/Level 1/SVG/p monster.svg">
+    <img height="200px" width="800x" id="lvl02_gameOverImg" src="../assets/index/game over.gif">
+    <img height="250px" width="800x" id="lvl02_gameCompleteImg" src="../assets/index/level complete.gif">
+    <img id="lvl02_heartImg1" src="../assets/index/heart x.svg">
+    <img id="lvl02_heartImg2" src="../assets/index/heart x.svg">
+    <img id="lvl02_heartImg3" src="../assets/index/heart x.svg">
 
-  <div class="lvl02_Score_enemyContainer">
-    <div id="lvl02_ScoreBoard">
-      <h1>Score : </h1>
-      <h1 id="lvl02_Score"> 00</h1>
+    <div class="lvl02_score_enemyContainer">
+        <div id="lvl02_scoreBoard">
+            <h1>Score : </h1>
+            <h1 id="lvl02_score"> 00</h1>
+        </div>
+        <div id="lvl02_enemyRemainCountContainer">
+            <h1>Enemies Left : </h1>
+            <h1 id="lvl02_enemyRemainCount">20</h1>
+        </div>
     </div>
-    <div id="lvl02_EnemyRemainCountContainer">
-      <h1>Enemies Left : </h1>
-      <h1 id="lvl02_EnemyRemainCount">20</h1>
-    </div>
-  </div>
+
+    <audio id="lvl02_gameCompleteSound" loop src="../assets/sounds/“Level Complete” Sound Effect.mp3"></audio>
+    <audio id="lvl02_gameOverSound" loop src="../assets/sounds/Dead _ Sound Effects.mp3"></audio>
+    <audio id="lvl02_BackgroundAudio" loop src="../assets/sounds/lvl02_background.wav"></audio>
+    <audio id="lvl02_sniper" loop src="../assets/sounds/Old Sniper Sound Effect (320 kbps).mp3"></audio>
 </main>
-
-<audio id="gameCompleteSound" loop src="../assets/sounds/“Level Complete” Sound Effect.mp3"></audio>
-<audio id="gameOverSound" loop src="../assets/sounds/Dead _ Sound Effects.mp3"></audio>
-<audio id="lvl01BackgroundAudio" loop src="../assets/sounds/dcpoke__birds-singing-03.mp3"></audio>
-<audio id="sniper" loop src="../assets/sounds/Old Sniper Sound Effect (320 kbps).mp3"></audio>
 
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script src="../script/lvl02JS.js"></script>

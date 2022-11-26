@@ -78,12 +78,6 @@
     padding-left: 5px;
 }
 
-#canvas1{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-}
-
 #enemyRemainCountContainer{
     display: flex;
 
@@ -138,7 +132,4 @@
     margin: 5px;
     width: 8vw;
     height: 9vh;
-    /*background-image: url("../../assets/index/heart x.svg");*/
-    /*background-size: cover;*/
-    /*background-position: center;*/
 }

@@ -24,8 +24,10 @@ function playGameCompleteSound(){
     audio5.play();
 }
 
-var enemyDIV = document.getElementById('enemy');
-var gameOverDIV = document.getElementById('gameOver');
+////////////////////////////////////////////////////////////////////////
+
+let enemyDIV = document.getElementById('enemy');
+let gameOverDIV = document.getElementById('gameOver');
 let enemiesLeft = $('#enemyRemainCount').text();
 ///////// Enemy Images /////////
 const enemy01=document.getElementById('enemy01');
